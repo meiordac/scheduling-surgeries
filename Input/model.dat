@@ -1,0 +1,15 @@
+data;
+set days := 1 2 3 4 5 6 7 ;
+set weeks := 1 2 3;
+set blocks := 1 2; #block surgical durations
+#set surgeons ;
+set operating_rooms := 1 2 3 4 5 6; #pabellones quirurgicos
+set patient_types := 1 2; #tipos de pacientes 
+
+
+param weekBlocks :
+         1    2     3:=
+   1    8   12   16
+   2   10   16   14 ;
+   
+   
