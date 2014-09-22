@@ -4,13 +4,19 @@ import glpk
 
 class Engine:
   
-  def __init__(self,date):
-    self.date = date
+  def __init__(self):
+    print "engine initiated"
+    
   
-  def solve(self):
-    print "starting..."
-    pr = glpk.glpk("Model/model.mod","Input/model.dat")
+  def Solve(self,rows):
+    print "solving..."
+    pr = glpk.glpk("Model/model.mod","Model/model.dat")
+    pr.numPatients[1] = len(rows)
+    pr.numPatients[2] = len(rows)
     pr.update()
     pr.solve()
-    print "solution:", pr.solution()
+    #print "solution:", pr.solution()
+    return pr.solution()
+    
+
     
