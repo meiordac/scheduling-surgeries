@@ -12,10 +12,9 @@ class Engine:
     print "solving..."
     pr = glpk.glpk("Model/model.mod","Model/model.dat")
     pr.numPatients[1] = len(rows)
-    pr.numPatients[2] = len(rows)
+    #pr.numPatients[2] = len(rows)
     pr.update()
     pr.solve()
-    #print "solution:", pr.solution()
     return pr.solution()
     
 
