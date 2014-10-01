@@ -1,7 +1,5 @@
 import glpk
 
-
-
 class Engine:
   
   def __init__(self):
