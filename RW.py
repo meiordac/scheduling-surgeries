@@ -14,7 +14,8 @@ class ReadExcel:
     sheet = book.sheet_by_index(0)
  
     for row_index in range(1,sheet.nrows):
-      rows.append({"Name":sheet.cell_value(row_index,0),"Date":sheet.cell_value(row_index,1),"Age":sheet.cell_value(row_index,2), "Rut":sheet.cell_value(row_index,3) })
+      rows.append({"Name":sheet.cell_value(row_index,0),"Date":sheet.cell_value(row_index,1),"Age":sheet.cell_value(row_index,2), "Rut":sheet.cell_value(row_index,3), "PatientType":sheet.cell_value(row_index,12) })
+      
 
     return rows
   

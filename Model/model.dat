@@ -1,14 +1,54 @@
 data;
-set days := 1 2 3 4 5 6 7 ;
-set weeks := 1 ;
-set blocks := 1; #block surgical durations
+set days := 1 2 3 4 5;
+set weeks := 1;
+set blocks := 1 2; #block surgical durations
+
+#1 -> 8 a 14:30
+#2 -> 8 a 19:00
+#1 PABELLON CORTO (8 A 14:30)
+#2 PABELLON LARGO (8 A 19:00)
+#3 PABELLON PROC. INVASIVO (8 A 14:30)
+#4 PABELLON CORTO A. LOCAL (8 A 14:30)
+#5 PABELLON (15:30 EN ADELANTE)
+
 #set surgeons ;
-set operatingRooms := 1 2; #pabellones quirurgicos
-set patientTypes := 1; #tipos de pacientes 
+set operatingRooms := 1;
+#1 -> PABELLONES CIRUGIA MAYOR PROGRAMADA
+#2 -> PABELLON ANESTESIA LOCAL
+#3 -> PABELLON ANGIOGRAFIA
+#4 -> PABELLON CMA
+#5 -> PABELLON SUS 
+
+set blocks_by_operatingRoom[1]:=1 ;
+set blocks_by_operatingRoom[2]:=1 ;
+
+set patientTypes := 1 2 3 4 5 6 7; #tipos de pacientes 
+#1->VASCULAR
+#2->DIGESTIVO BAJO
+#3->DIGESTIVO ALTO
+#4->ANGIOGRAFIA
+#5->HEPATOBILIAR
+#6->CIRUGIA PLASTICA
+#7->CABEZA Y CUELLO
 
 
-param weekBlocks :
-	1    :=
-   1	8   ;
+
+param alpha:=
+1 5
+2 3
+3 4
+4 1
+5 2
+6 1
+7 3;
+
+param ORAvailable:
+  1 2 3 4 5:=
+1 9 8 9 9 8;
+
+param totalBlocks:
+  1 2 3 4 5:=
+1 6 7 8 7 6   
+2 3 2 3 2 3;
    
    
