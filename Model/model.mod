@@ -41,6 +41,7 @@ var assignedOR{p in patientTypes, op in operatingRooms, d in days} binary; #defi
 
 maximize ocupation:
   sum{p in patientTypes, b in blocks, d in days } assignedBlock[p,b,d]*alpha[p]; 
+  
   #sum{b in blocks, d in days, w in weeks} assignedBlock[b,d,w]; #maximizar ocupacion, maximizando la suma de la ocupacion de los bloques
 
 # ---------------------

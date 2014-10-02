@@ -6,9 +6,8 @@ class Engine:
   def __init__(self):
     print "engine initiated"
     
-  
-  def Solve(self,rows):
-    print "solving..."
+  def LoadProblem(self,rows):
+    
     pr = glpk.glpk("Model/model.mod","Model/model.dat")
  
     countPatients = defaultdict(int)
@@ -22,6 +21,11 @@ class Engine:
     for p in range(1,8):
       pr.numPatients[p] = countPatients[p]
     
+    return pr
+    
+  
+  def Solve(self,pr):
+    print "Solving problem..."
     pr.update()
     pr.solve()
     return pr.solution()
