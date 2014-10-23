@@ -7,8 +7,8 @@ def main():
   e = Engine.Engine()
   pr = e.LoadProblem(rows)
   s = e.Solve(pr)
-  RW.ReadExcel.Write(s)
-  GUI.Print(pr)
+  #RW.ReadExcel.Write(s)
+  #GUI.Print(pr)
   
 if __name__ == "__main__":
     main()

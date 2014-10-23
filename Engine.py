@@ -2,6 +2,7 @@ import glpk
 import time
 import datetime
 from collections import defaultdict
+import subprocess
 
 class Engine:
   
@@ -17,7 +18,6 @@ class Engine:
     f.write(';\n')
     f.write('\nparam waitingPeriod := ')
     for r in rows:
-      #f.write(str(int(r['Patient']))+' '+str((r['Date'])-time.strftime("%d/%m/%Y"))+'\n')
       waitingPeriod=datetime.datetime.now() -datetime.datetime.strptime((r['Date']), "%Y-%m-%d") 
       f.write(str(int(r['Patient']))+' '+str(waitingPeriod.days) +'\n')
     f.write(';\n')
@@ -25,11 +25,14 @@ class Engine:
     for r in rows:
       f.write(str(int(r['Patient']))+' '+str(int(r['GES']))+'\n')
     f.write(';\n')
+    f.write('\nparam surgeryLength := ')
+    for r in rows:
+      f.write(str(int(r['Patient']))+' '+str(r['SurgeryLength'])+'\n')
+    f.write(';')
     f.close()
     
-    
-#se crea el archivo de input final que junta el modelo.dat (parametros fijos) y los parametros variables  
-  def CreateInputFile(self):        
+  def CreateInputFile(self):    
+  #se crea el archivo de input final que junta el modelo.dat (parametros fijos) y los parametros variables      
     filenames = ['Model/constant.dat', 'Model/variable.dat']
     with open('Model/model.dat', 'w') as outfile:
       for fname in filenames:
@@ -42,12 +45,10 @@ class Engine:
     self.CreateInputFile()
     #se crea el problema y se le pasan el modelo y el .dat
     pr = glpk.glpk("Model/model.mod","Model/model.dat")
-    
     #cuenta la cantidad de pacientes de tipo p y los agrega al arreglo countPatients
     countPatients = defaultdict(int)
     for r in rows:
       countPatients[r['PatientType']] += 1  
-    
     #entrega al parametro numPatients{p} la cantidad de pacientes de ese tpo
     for p in range(1,len(countPatients)+1):
       pr.numPatients[p] = countPatients[p]
@@ -56,8 +57,9 @@ class Engine:
  
   def Solve(self,pr):
     print "Solving problem..."
-    pr.update()
-    pr.solve()
+    #capture = subprocess.check_output(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--output", "Output/output.out"])
+    subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--output", "Output/output.out"])
+    #print capture
     return pr.solution()
     
 

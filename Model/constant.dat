@@ -12,6 +12,7 @@ set blocks := 1 2; #block surgical durations
 #5 PABELLON (15:30 EN ADELANTE)
 
 #set surgeons ;
+#set operatingRooms := 1 2 3 4 5 6 7 8 9;
 set operatingRooms := 1;
 #1 -> PABELLONES CIRUGIA MAYOR PROGRAMADA
 #2 -> PABELLON ANESTESIA LOCAL
@@ -19,8 +20,8 @@ set operatingRooms := 1;
 #4 -> PABELLON CMA
 #5 -> PABELLON SUS 
 
-set blocks_by_operatingRoom[1]:=1 ;
-set blocks_by_operatingRoom[2]:=1 ;
+#set blocks_by_operatingRoom[1]:=1 ;
+#set blocks_by_operatingRoom[2]:=1 ;
 
 set patientTypes := 1 2 3 4 5 6 7; #tipos de pacientes 
 #1->VASCULAR
@@ -30,6 +31,10 @@ set patientTypes := 1 2 3 4 5 6 7; #tipos de pacientes
 #5->HEPATOBILIAR
 #6->CIRUGIA PLASTICA
 #7->CABEZA Y CUELLO
+
+param blockDuration:=
+1 6
+2 11;
 
 param alpha:=
 1 5
