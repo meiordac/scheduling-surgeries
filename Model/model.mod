@@ -16,7 +16,7 @@ set patients;
  
 
 param numPatients{pt in patientTypes} >=0; #numero de pacientes del tipo p, cantidad de casos de ese tipo
-param ORAvailable{op in operatingRooms, d in days} >=0; #salas de operaciones del tip op disponibles en dia d
+param ORAvailable{d in days} >=0; #salas de operaciones del tip op disponibles en dia d
 param blockDuration{b in blocks}; #duracion del bloque b
 param totalBlocks{b in blocks, d in days} >=0 ; #numero total de bloques quirurgicos del tipo b en dia d
 param alpha{pt in patientTypes}; #nivel de prioridad del paciente tipo p, es un ponderador usado en funcion objetivo
@@ -53,9 +53,15 @@ maximize objectiveFunction:
 
 subject to rest_max_blocks {b in blocks, d in days}:
   sum{pt in patientTypes, op in operatingRooms} assignedBlock[pt,op,b,d] <= totalBlocks[b,d];
+  
+subject to rest_no_duplicate_patients {p in patients}: 
+  sum{d in days, b in blocks}assignedPatient[p,b,d] <= 1;
 
 subject to rest_max_num_patients_per_block {b in blocks, d in days, pt in patientTypes}:
   sum{p in patients} assignedPatient[p,b,d]*surgeryLength[p] <=  blockDuration[b];
+  
+  subject to rest_max_or{d in days}:
+  sum{pt in patientTypes, op in operatingRooms,b in blocks} assignedBlock[pt,op,b,d]<=ORAvailable[d];
   
 # La cantidad de bloques debe estar restringida a la cantidad de salas de operacion disponibles para un dia dado
 

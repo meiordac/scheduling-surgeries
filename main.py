@@ -7,7 +7,7 @@ def main():
   e = Engine.Engine()
   pr = e.LoadProblem(rows)
   s = e.Solve(pr)
-  #RW.ReadExcel.Write(s)
+  RW.ReadExcel.generateExcel(pr,rows)
   #GUI.Print(pr)
   
 if __name__ == "__main__":

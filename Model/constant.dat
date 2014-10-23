@@ -12,16 +12,13 @@ set blocks := 1 2; #block surgical durations
 #5 PABELLON (15:30 EN ADELANTE)
 
 #set surgeons ;
-#set operatingRooms := 1 2 3 4 5 6 7 8 9;
-set operatingRooms := 1;
+set operatingRooms := 1 2 3 4 5 6 7 8 9 10 11;
+#por simplicidad se consideran todos iguales por ahora
 #1 -> PABELLONES CIRUGIA MAYOR PROGRAMADA
 #2 -> PABELLON ANESTESIA LOCAL
 #3 -> PABELLON ANGIOGRAFIA
 #4 -> PABELLON CMA
 #5 -> PABELLON SUS 
-
-#set blocks_by_operatingRoom[1]:=1 ;
-#set blocks_by_operatingRoom[2]:=1 ;
 
 set patientTypes := 1 2 3 4 5 6 7; #tipos de pacientes 
 #1->VASCULAR
@@ -47,9 +44,12 @@ param alpha:=
 
 param beta:= 10;
 
-param ORAvailable:
-  1 2 3 4 5:=
-1 9 8 9 9 8;
+param ORAvailable:=
+1 11
+2 11
+3 11
+4 10
+5 11;
 
 param totalBlocks:
   1 2 3 4 5:=
