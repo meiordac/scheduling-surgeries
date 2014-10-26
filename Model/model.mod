@@ -57,10 +57,10 @@ subject to rest_max_blocks {b in blocks, d in days}:
 subject to rest_no_duplicate_patients {p in patients}: 
   sum{d in days, b in blocks}assignedPatient[p,b,d] <= 1;
 
-subject to rest_max_num_patients_per_block {b in blocks, d in days, pt in patientTypes}:
+subject to rest_max_num_patients_per_block {b in blocks, d in days}:
   sum{p in patients} assignedPatient[p,b,d]*surgeryLength[p] <=  blockDuration[b];
   
-  subject to rest_max_or{d in days}:
+subject to rest_max_or{d in days}:
   sum{pt in patientTypes, op in operatingRooms,b in blocks} assignedBlock[pt,op,b,d]<=ORAvailable[d];
   
 # La cantidad de bloques debe estar restringida a la cantidad de salas de operacion disponibles para un dia dado

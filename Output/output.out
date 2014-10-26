@@ -1,20 +1,20 @@
 Problem:    model
-Rows:       157
-Columns:    830 (830 integer, 830 binary)
-Non-zeros:  6700
-Status:     INTEGER OPTIMAL
-Objective:  objectiveFunction = 740936 (MAXimum)
+Rows:       102
+Columns:    1530 (1530 integer, 1530 binary)
+Non-zeros:  4590
+Status:     INTEGER NON-OPTIMAL
+Objective:  objectiveFunction = 6524899 (MAXimum)
 
    No.   Row name        Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
      1 objectiveFunction
-                              740936                             
+                          6.5249e+06                             
      2 rest_max_blocks[1,1]
                                    6                           6 
      3 rest_max_blocks[1,2]
                                    7                           7 
      4 rest_max_blocks[1,3]
-                                   7                           8 
+                                   8                           8 
      5 rest_max_blocks[1,4]
                                    7                           7 
      6 rest_max_blocks[1,5]
@@ -48,7 +48,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     20 rest_no_duplicate_patients[9]
                                    1                           1 
     21 rest_no_duplicate_patients[10]
-                                   1                           1 
+                                   0                           1 
     22 rest_no_duplicate_patients[11]
                                    1                           1 
     23 rest_no_duplicate_patients[12]
@@ -62,23 +62,23 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     27 rest_no_duplicate_patients[16]
                                    1                           1 
     28 rest_no_duplicate_patients[17]
-                                   1                           1 
+                                   0                           1 
     29 rest_no_duplicate_patients[18]
-                                   1                           1 
+                                   0                           1 
     30 rest_no_duplicate_patients[19]
                                    1                           1 
     31 rest_no_duplicate_patients[20]
-                                   1                           1 
+                                   0                           1 
     32 rest_no_duplicate_patients[21]
                                    1                           1 
     33 rest_no_duplicate_patients[22]
-                                   1                           1 
+                                   0                           1 
     34 rest_no_duplicate_patients[23]
-                                   1                           1 
+                                   0                           1 
     35 rest_no_duplicate_patients[24]
-                                   1                           1 
+                                   0                           1 
     36 rest_no_duplicate_patients[25]
-                                   1                           1 
+                                   0                           1 
     37 rest_no_duplicate_patients[26]
                                    0                           1 
     38 rest_no_duplicate_patients[27]
@@ -102,35 +102,35 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     47 rest_no_duplicate_patients[36]
                                    1                           1 
     48 rest_no_duplicate_patients[37]
-                                   1                           1 
+                                   0                           1 
     49 rest_no_duplicate_patients[38]
-                                   1                           1 
+                                   0                           1 
     50 rest_no_duplicate_patients[39]
                                    1                           1 
     51 rest_no_duplicate_patients[40]
-                                   1                           1 
+                                   0                           1 
     52 rest_no_duplicate_patients[41]
-                                   1                           1 
+                                   0                           1 
     53 rest_no_duplicate_patients[42]
                                    1                           1 
     54 rest_no_duplicate_patients[43]
-                                   1                           1 
+                                   0                           1 
     55 rest_no_duplicate_patients[44]
-                                   1                           1 
+                                   0                           1 
     56 rest_no_duplicate_patients[45]
-                                   1                           1 
+                                   0                           1 
     57 rest_no_duplicate_patients[46]
-                                   1                           1 
+                                   0                           1 
     58 rest_no_duplicate_patients[47]
-                                   1                           1 
+                                   0                           1 
     59 rest_no_duplicate_patients[48]
-                                   1                           1 
+                                   0                           1 
     60 rest_no_duplicate_patients[49]
-                                   1                           1 
+                                   0                           1 
     61 rest_no_duplicate_patients[50]
-                                   1                           1 
+                                   0                           1 
     62 rest_no_duplicate_patients[51]
-                                   1                           1 
+                                   0                           1 
     63 rest_no_duplicate_patients[52]
                                    1                           1 
     64 rest_no_duplicate_patients[53]
@@ -156,7 +156,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     74 rest_no_duplicate_patients[63]
                                    1                           1 
     75 rest_no_duplicate_patients[64]
-                                   1                           1 
+                                   0                           1 
     76 rest_no_duplicate_patients[65]
                                    1                           1 
     77 rest_no_duplicate_patients[66]
@@ -166,161 +166,51 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     79 rest_no_duplicate_patients[68]
                                    1                           1 
     80 rest_no_duplicate_patients[69]
-                                   1                           1 
+                                   0                           1 
     81 rest_no_duplicate_patients[70]
-                                   1                           1 
+                                   0                           1 
     82 rest_no_duplicate_patients[71]
-                                   1                           1 
+                                   0                           1 
     83 rest_no_duplicate_patients[72]
-                                   1                           1 
+                                   0                           1 
     84 rest_no_duplicate_patients[73]
-                                   1                           1 
+                                   0                           1 
     85 rest_no_duplicate_patients[74]
-                                   1                           1 
+                                   0                           1 
     86 rest_no_duplicate_patients[75]
-                                   1                           1 
+                                   0                           1 
     87 rest_no_duplicate_patients[76]
-                                   1                           1 
-    88 rest_max_num_patients_per_block[1,1,1]
-                                 1.5                           6 
-    89 rest_max_num_patients_per_block[1,1,2]
-                                 1.5                           6 
-    90 rest_max_num_patients_per_block[1,1,3]
-                                 1.5                           6 
-    91 rest_max_num_patients_per_block[1,1,4]
-                                 1.5                           6 
-    92 rest_max_num_patients_per_block[1,1,5]
-                                 1.5                           6 
-    93 rest_max_num_patients_per_block[1,1,6]
-                                 1.5                           6 
-    94 rest_max_num_patients_per_block[1,1,7]
-                                 1.5                           6 
-    95 rest_max_num_patients_per_block[1,2,1]
-                                 5.6                           6 
-    96 rest_max_num_patients_per_block[1,2,2]
-                                 5.6                           6 
-    97 rest_max_num_patients_per_block[1,2,3]
-                                 5.6                           6 
-    98 rest_max_num_patients_per_block[1,2,4]
-                                 5.6                           6 
-    99 rest_max_num_patients_per_block[1,2,5]
-                                 5.6                           6 
-   100 rest_max_num_patients_per_block[1,2,6]
-                                 5.6                           6 
-   101 rest_max_num_patients_per_block[1,2,7]
-                                 5.6                           6 
-   102 rest_max_num_patients_per_block[1,3,1]
-                                 4.9                           6 
-   103 rest_max_num_patients_per_block[1,3,2]
-                                 4.9                           6 
-   104 rest_max_num_patients_per_block[1,3,3]
-                                 4.9                           6 
-   105 rest_max_num_patients_per_block[1,3,4]
-                                 4.9                           6 
-   106 rest_max_num_patients_per_block[1,3,5]
-                                 4.9                           6 
-   107 rest_max_num_patients_per_block[1,3,6]
-                                 4.9                           6 
-   108 rest_max_num_patients_per_block[1,3,7]
-                                 4.9                           6 
-   109 rest_max_num_patients_per_block[1,4,1]
-                                 5.7                           6 
-   110 rest_max_num_patients_per_block[1,4,2]
-                                 5.7                           6 
-   111 rest_max_num_patients_per_block[1,4,3]
-                                 5.7                           6 
-   112 rest_max_num_patients_per_block[1,4,4]
-                                 5.7                           6 
-   113 rest_max_num_patients_per_block[1,4,5]
-                                 5.7                           6 
-   114 rest_max_num_patients_per_block[1,4,6]
-                                 5.7                           6 
-   115 rest_max_num_patients_per_block[1,4,7]
-                                 5.7                           6 
-   116 rest_max_num_patients_per_block[1,5,1]
-                                 5.8                           6 
-   117 rest_max_num_patients_per_block[1,5,2]
-                                 5.8                           6 
-   118 rest_max_num_patients_per_block[1,5,3]
-                                 5.8                           6 
-   119 rest_max_num_patients_per_block[1,5,4]
-                                 5.8                           6 
-   120 rest_max_num_patients_per_block[1,5,5]
-                                 5.8                           6 
-   121 rest_max_num_patients_per_block[1,5,6]
-                                 5.8                           6 
-   122 rest_max_num_patients_per_block[1,5,7]
-                                 5.8                           6 
-   123 rest_max_num_patients_per_block[2,1,1]
-                                 5.8                          11 
-   124 rest_max_num_patients_per_block[2,1,2]
-                                 5.8                          11 
-   125 rest_max_num_patients_per_block[2,1,3]
-                                 5.8                          11 
-   126 rest_max_num_patients_per_block[2,1,4]
-                                 5.8                          11 
-   127 rest_max_num_patients_per_block[2,1,5]
-                                 5.8                          11 
-   128 rest_max_num_patients_per_block[2,1,6]
-                                 5.8                          11 
-   129 rest_max_num_patients_per_block[2,1,7]
-                                 5.8                          11 
-   130 rest_max_num_patients_per_block[2,2,1]
-                                 3.9                          11 
-   131 rest_max_num_patients_per_block[2,2,2]
-                                 3.9                          11 
-   132 rest_max_num_patients_per_block[2,2,3]
-                                 3.9                          11 
-   133 rest_max_num_patients_per_block[2,2,4]
-                                 3.9                          11 
-   134 rest_max_num_patients_per_block[2,2,5]
-                                 3.9                          11 
-   135 rest_max_num_patients_per_block[2,2,6]
-                                 3.9                          11 
-   136 rest_max_num_patients_per_block[2,2,7]
-                                 3.9                          11 
-   137 rest_max_num_patients_per_block[2,3,1]
-                                   0                          11 
-   138 rest_max_num_patients_per_block[2,3,2]
-                                   0                          11 
-   139 rest_max_num_patients_per_block[2,3,3]
-                                   0                          11 
-   140 rest_max_num_patients_per_block[2,3,4]
-                                   0                          11 
-   141 rest_max_num_patients_per_block[2,3,5]
-                                   0                          11 
-   142 rest_max_num_patients_per_block[2,3,6]
-                                   0                          11 
-   143 rest_max_num_patients_per_block[2,3,7]
-                                   0                          11 
-   144 rest_max_num_patients_per_block[2,4,1]
-                                   3                          11 
-   145 rest_max_num_patients_per_block[2,4,2]
-                                   3                          11 
-   146 rest_max_num_patients_per_block[2,4,3]
-                                   3                          11 
-   147 rest_max_num_patients_per_block[2,4,4]
-                                   3                          11 
-   148 rest_max_num_patients_per_block[2,4,5]
-                                   3                          11 
-   149 rest_max_num_patients_per_block[2,4,6]
-                                   3                          11 
-   150 rest_max_num_patients_per_block[2,4,7]
-                                   3                          11 
-   151 rest_max_num_patients_per_block[2,5,1]
-                                 0.7                          11 
-   152 rest_max_num_patients_per_block[2,5,2]
-                                 0.7                          11 
-   153 rest_max_num_patients_per_block[2,5,3]
-                                 0.7                          11 
-   154 rest_max_num_patients_per_block[2,5,4]
-                                 0.7                          11 
-   155 rest_max_num_patients_per_block[2,5,5]
-                                 0.7                          11 
-   156 rest_max_num_patients_per_block[2,5,6]
-                                 0.7                          11 
-   157 rest_max_num_patients_per_block[2,5,7]
-                                 0.7                          11 
+                                   0                           1 
+    88 rest_max_num_patients_per_block[1,1]
+                                   6                           6 
+    89 rest_max_num_patients_per_block[1,2]
+                                   6                           6 
+    90 rest_max_num_patients_per_block[1,3]
+                                   6                           6 
+    91 rest_max_num_patients_per_block[1,4]
+                                   6                           6 
+    92 rest_max_num_patients_per_block[1,5]
+                                   6                           6 
+    93 rest_max_num_patients_per_block[2,1]
+                                  11                          11 
+    94 rest_max_num_patients_per_block[2,2]
+                                  11                          11 
+    95 rest_max_num_patients_per_block[2,3]
+                                  11                          11 
+    96 rest_max_num_patients_per_block[2,4]
+                                  11                          11 
+    97 rest_max_num_patients_per_block[2,5]
+                                  11                          11 
+    98 rest_max_or[1]
+                                   9                          11 
+    99 rest_max_or[2]
+                                   9                          11 
+   100 rest_max_or[3]
+                                  11                          11 
+   101 rest_max_or[4]
+                                   9                          10 
+   102 rest_max_or[5]
+                                   9                          11 
 
    No. Column name       Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
@@ -329,7 +219,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
      2 assignedPatient[2,1,1]
                     *              0             0             1 
      3 assignedPatient[3,1,1]
-                    *              0             0             1 
+                    *              1             0             1 
      4 assignedPatient[4,1,1]
                     *              0             0             1 
      5 assignedPatient[5,1,1]
@@ -351,7 +241,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     13 assignedPatient[13,1,1]
                     *              0             0             1 
     14 assignedPatient[14,1,1]
-                    *              0             0             1 
+                    *              1             0             1 
     15 assignedPatient[15,1,1]
                     *              0             0             1 
     16 assignedPatient[16,1,1]
@@ -383,7 +273,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     29 assignedPatient[29,1,1]
                     *              0             0             1 
     30 assignedPatient[30,1,1]
-                    *              0             0             1 
+                    *              1             0             1 
     31 assignedPatient[31,1,1]
                     *              0             0             1 
     32 assignedPatient[32,1,1]
@@ -435,7 +325,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     55 assignedPatient[55,1,1]
                     *              0             0             1 
     56 assignedPatient[56,1,1]
-                    *              1             0             1 
+                    *              0             0             1 
     57 assignedPatient[57,1,1]
                     *              0             0             1 
     58 assignedPatient[58,1,1]
@@ -443,7 +333,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     59 assignedPatient[59,1,1]
                     *              0             0             1 
     60 assignedPatient[60,1,1]
-                    *              1             0             1 
+                    *              0             0             1 
     61 assignedPatient[61,1,1]
                     *              0             0             1 
     62 assignedPatient[62,1,1]
@@ -479,13 +369,13 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     77 assignedPatient[1,1,2]
                     *              0             0             1 
     78 assignedPatient[2,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
     79 assignedPatient[3,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
     80 assignedPatient[4,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
     81 assignedPatient[5,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
     82 assignedPatient[6,1,2]
                     *              0             0             1 
     83 assignedPatient[7,1,2]
@@ -497,7 +387,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     86 assignedPatient[10,1,2]
                     *              0             0             1 
     87 assignedPatient[11,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
     88 assignedPatient[12,1,2]
                     *              0             0             1 
     89 assignedPatient[13,1,2]
@@ -517,7 +407,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
     96 assignedPatient[20,1,2]
                     *              0             0             1 
     97 assignedPatient[21,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
     98 assignedPatient[22,1,2]
                     *              0             0             1 
     99 assignedPatient[23,1,2]
@@ -529,19 +419,19 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    102 assignedPatient[26,1,2]
                     *              0             0             1 
    103 assignedPatient[27,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
    104 assignedPatient[28,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
    105 assignedPatient[29,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
    106 assignedPatient[30,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
    107 assignedPatient[31,1,2]
                     *              0             0             1 
    108 assignedPatient[32,1,2]
                     *              0             0             1 
    109 assignedPatient[33,1,2]
-                    *              0             0             1 
+                    *              1             0             1 
    110 assignedPatient[34,1,2]
                     *              0             0             1 
    111 assignedPatient[35,1,2]
@@ -553,7 +443,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    114 assignedPatient[38,1,2]
                     *              0             0             1 
    115 assignedPatient[39,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
    116 assignedPatient[40,1,2]
                     *              0             0             1 
    117 assignedPatient[41,1,2]
@@ -573,7 +463,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    124 assignedPatient[48,1,2]
                     *              0             0             1 
    125 assignedPatient[49,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
    126 assignedPatient[50,1,2]
                     *              0             0             1 
    127 assignedPatient[51,1,2]
@@ -581,13 +471,13 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    128 assignedPatient[52,1,2]
                     *              1             0             1 
    129 assignedPatient[53,1,2]
-                    *              1             0             1 
-   130 assignedPatient[54,1,2]
-                    *              1             0             1 
-   131 assignedPatient[55,1,2]
-                    *              1             0             1 
-   132 assignedPatient[56,1,2]
                     *              0             0             1 
+   130 assignedPatient[54,1,2]
+                    *              0             0             1 
+   131 assignedPatient[55,1,2]
+                    *              0             0             1 
+   132 assignedPatient[56,1,2]
+                    *              1             0             1 
    133 assignedPatient[57,1,2]
                     *              0             0             1 
    134 assignedPatient[58,1,2]
@@ -639,13 +529,13 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    157 assignedPatient[5,1,3]
                     *              0             0             1 
    158 assignedPatient[6,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    159 assignedPatient[7,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    160 assignedPatient[8,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    161 assignedPatient[9,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    162 assignedPatient[10,1,3]
                     *              0             0             1 
    163 assignedPatient[11,1,3]
@@ -681,7 +571,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    178 assignedPatient[26,1,3]
                     *              0             0             1 
    179 assignedPatient[27,1,3]
-                    *              0             0             1 
+                    *              1             0             1 
    180 assignedPatient[28,1,3]
                     *              0             0             1 
    181 assignedPatient[29,1,3]
@@ -691,9 +581,9 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    183 assignedPatient[31,1,3]
                     *              1             0             1 
    184 assignedPatient[32,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    185 assignedPatient[33,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    186 assignedPatient[34,1,3]
                     *              0             0             1 
    187 assignedPatient[35,1,3]
@@ -705,7 +595,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    190 assignedPatient[38,1,3]
                     *              0             0             1 
    191 assignedPatient[39,1,3]
-                    *              0             0             1 
+                    *              1             0             1 
    192 assignedPatient[40,1,3]
                     *              0             0             1 
    193 assignedPatient[41,1,3]
@@ -741,11 +631,11 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    208 assignedPatient[56,1,3]
                     *              0             0             1 
    209 assignedPatient[57,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    210 assignedPatient[58,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    211 assignedPatient[59,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    212 assignedPatient[60,1,3]
                     *              0             0             1 
    213 assignedPatient[61,1,3]
@@ -781,7 +671,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    228 assignedPatient[76,1,3]
                     *              0             0             1 
    229 assignedPatient[1,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    230 assignedPatient[2,1,4]
                     *              0             0             1 
    231 assignedPatient[3,1,4]
@@ -799,17 +689,17 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    237 assignedPatient[9,1,4]
                     *              0             0             1 
    238 assignedPatient[10,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    239 assignedPatient[11,1,4]
                     *              0             0             1 
    240 assignedPatient[12,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    241 assignedPatient[13,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    242 assignedPatient[14,1,4]
                     *              0             0             1 
    243 assignedPatient[15,1,4]
-                    *              0             0             1 
+                    *              1             0             1 
    244 assignedPatient[16,1,4]
                     *              0             0             1 
    245 assignedPatient[17,1,4]
@@ -843,17 +733,17 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    259 assignedPatient[31,1,4]
                     *              0             0             1 
    260 assignedPatient[32,1,4]
-                    *              0             0             1 
+                    *              1             0             1 
    261 assignedPatient[33,1,4]
                     *              0             0             1 
    262 assignedPatient[34,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    263 assignedPatient[35,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    264 assignedPatient[36,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    265 assignedPatient[37,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    266 assignedPatient[38,1,4]
                     *              0             0             1 
    267 assignedPatient[39,1,4]
@@ -865,7 +755,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    270 assignedPatient[42,1,4]
                     *              0             0             1 
    271 assignedPatient[43,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    272 assignedPatient[44,1,4]
                     *              0             0             1 
    273 assignedPatient[45,1,4]
@@ -903,7 +793,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    289 assignedPatient[61,1,4]
                     *              1             0             1 
    290 assignedPatient[62,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    291 assignedPatient[63,1,4]
                     *              0             0             1 
    292 assignedPatient[64,1,4]
@@ -943,7 +833,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    309 assignedPatient[5,1,5]
                     *              0             0             1 
    310 assignedPatient[6,1,5]
-                    *              0             0             1 
+                    *              1             0             1 
    311 assignedPatient[7,1,5]
                     *              0             0             1 
    312 assignedPatient[8,1,5]
@@ -959,17 +849,17 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    317 assignedPatient[13,1,5]
                     *              0             0             1 
    318 assignedPatient[14,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    319 assignedPatient[15,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    320 assignedPatient[16,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    321 assignedPatient[17,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    322 assignedPatient[18,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    323 assignedPatient[19,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    324 assignedPatient[20,1,5]
                     *              0             0             1 
    325 assignedPatient[21,1,5]
@@ -1007,15 +897,15 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    341 assignedPatient[37,1,5]
                     *              0             0             1 
    342 assignedPatient[38,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    343 assignedPatient[39,1,5]
                     *              0             0             1 
    344 assignedPatient[40,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    345 assignedPatient[41,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    346 assignedPatient[42,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    347 assignedPatient[43,1,5]
                     *              0             0             1 
    348 assignedPatient[44,1,5]
@@ -1055,19 +945,19 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    365 assignedPatient[61,1,5]
                     *              0             0             1 
    366 assignedPatient[62,1,5]
-                    *              0             0             1 
+                    *              1             0             1 
    367 assignedPatient[63,1,5]
                     *              0             0             1 
    368 assignedPatient[64,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    369 assignedPatient[65,1,5]
                     *              1             0             1 
    370 assignedPatient[66,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    371 assignedPatient[67,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    372 assignedPatient[68,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
    373 assignedPatient[69,1,5]
                     *              0             0             1 
    374 assignedPatient[70,1,5]
@@ -1087,7 +977,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    381 assignedPatient[1,2,1]
                     *              0             0             1 
    382 assignedPatient[2,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
    383 assignedPatient[3,2,1]
                     *              0             0             1 
    384 assignedPatient[4,2,1]
@@ -1105,9 +995,9 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    390 assignedPatient[10,2,1]
                     *              0             0             1 
    391 assignedPatient[11,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
    392 assignedPatient[12,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
    393 assignedPatient[13,2,1]
                     *              0             0             1 
    394 assignedPatient[14,2,1]
@@ -1121,15 +1011,15 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    398 assignedPatient[18,2,1]
                     *              0             0             1 
    399 assignedPatient[19,2,1]
-                    *              0             0             1 
-   400 assignedPatient[20,2,1]
                     *              1             0             1 
+   400 assignedPatient[20,2,1]
+                    *              0             0             1 
    401 assignedPatient[21,2,1]
                     *              0             0             1 
    402 assignedPatient[22,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
    403 assignedPatient[23,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
    404 assignedPatient[24,2,1]
                     *              0             0             1 
    405 assignedPatient[25,2,1]
@@ -1171,15 +1061,15 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    423 assignedPatient[43,2,1]
                     *              0             0             1 
    424 assignedPatient[44,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
    425 assignedPatient[45,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
    426 assignedPatient[46,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
    427 assignedPatient[47,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
    428 assignedPatient[48,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
    429 assignedPatient[49,2,1]
                     *              0             0             1 
    430 assignedPatient[50,2,1]
@@ -1189,9 +1079,9 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    432 assignedPatient[52,2,1]
                     *              0             0             1 
    433 assignedPatient[53,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
    434 assignedPatient[54,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
    435 assignedPatient[55,2,1]
                     *              0             0             1 
    436 assignedPatient[56,2,1]
@@ -1221,11 +1111,11 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    448 assignedPatient[68,2,1]
                     *              0             0             1 
    449 assignedPatient[69,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
    450 assignedPatient[70,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
    451 assignedPatient[71,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
    452 assignedPatient[72,2,1]
                     *              0             0             1 
    453 assignedPatient[73,2,1]
@@ -1243,9 +1133,9 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    459 assignedPatient[3,2,2]
                     *              0             0             1 
    460 assignedPatient[4,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
    461 assignedPatient[5,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
    462 assignedPatient[6,2,2]
                     *              0             0             1 
    463 assignedPatient[7,2,2]
@@ -1267,7 +1157,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    471 assignedPatient[15,2,2]
                     *              0             0             1 
    472 assignedPatient[16,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
    473 assignedPatient[17,2,2]
                     *              0             0             1 
    474 assignedPatient[18,2,2]
@@ -1283,15 +1173,15 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    479 assignedPatient[23,2,2]
                     *              0             0             1 
    480 assignedPatient[24,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
    481 assignedPatient[25,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
    482 assignedPatient[26,2,2]
                     *              0             0             1 
    483 assignedPatient[27,2,2]
                     *              0             0             1 
    484 assignedPatient[28,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
    485 assignedPatient[29,2,2]
                     *              0             0             1 
    486 assignedPatient[30,2,2]
@@ -1335,9 +1225,9 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    505 assignedPatient[49,2,2]
                     *              0             0             1 
    506 assignedPatient[50,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
    507 assignedPatient[51,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
    508 assignedPatient[52,2,2]
                     *              0             0             1 
    509 assignedPatient[53,2,2]
@@ -1371,7 +1261,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    523 assignedPatient[67,2,2]
                     *              0             0             1 
    524 assignedPatient[68,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
    525 assignedPatient[69,2,2]
                     *              0             0             1 
    526 assignedPatient[70,2,2]
@@ -1379,13 +1269,13 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    527 assignedPatient[71,2,2]
                     *              0             0             1 
    528 assignedPatient[72,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
    529 assignedPatient[73,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
    530 assignedPatient[74,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
    531 assignedPatient[75,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
    532 assignedPatient[76,2,2]
                     *              0             0             1 
    533 assignedPatient[1,2,3]
@@ -1413,7 +1303,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    544 assignedPatient[12,2,3]
                     *              0             0             1 
    545 assignedPatient[13,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
    546 assignedPatient[14,2,3]
                     *              0             0             1 
    547 assignedPatient[15,2,3]
@@ -1429,7 +1319,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    552 assignedPatient[20,2,3]
                     *              0             0             1 
    553 assignedPatient[21,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
    554 assignedPatient[22,2,3]
                     *              0             0             1 
    555 assignedPatient[23,2,3]
@@ -1445,7 +1335,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    560 assignedPatient[28,2,3]
                     *              0             0             1 
    561 assignedPatient[29,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
    562 assignedPatient[30,2,3]
                     *              0             0             1 
    563 assignedPatient[31,2,3]
@@ -1457,7 +1347,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    566 assignedPatient[34,2,3]
                     *              0             0             1 
    567 assignedPatient[35,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
    568 assignedPatient[36,2,3]
                     *              0             0             1 
    569 assignedPatient[37,2,3]
@@ -1505,7 +1395,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    590 assignedPatient[58,2,3]
                     *              0             0             1 
    591 assignedPatient[59,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
    592 assignedPatient[60,2,3]
                     *              0             0             1 
    593 assignedPatient[61,2,3]
@@ -1519,7 +1409,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    597 assignedPatient[65,2,3]
                     *              0             0             1 
    598 assignedPatient[66,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
    599 assignedPatient[67,2,3]
                     *              0             0             1 
    600 assignedPatient[68,2,3]
@@ -1553,9 +1443,9 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    614 assignedPatient[6,2,4]
                     *              0             0             1 
    615 assignedPatient[7,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
    616 assignedPatient[8,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
    617 assignedPatient[9,2,4]
                     *              0             0             1 
    618 assignedPatient[10,2,4]
@@ -1607,11 +1497,11 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    641 assignedPatient[33,2,4]
                     *              0             0             1 
    642 assignedPatient[34,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
    643 assignedPatient[35,2,4]
                     *              0             0             1 
    644 assignedPatient[36,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
    645 assignedPatient[37,2,4]
                     *              0             0             1 
    646 assignedPatient[38,2,4]
@@ -1649,17 +1539,17 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    662 assignedPatient[54,2,4]
                     *              0             0             1 
    663 assignedPatient[55,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
    664 assignedPatient[56,2,4]
                     *              0             0             1 
    665 assignedPatient[57,2,4]
                     *              0             0             1 
    666 assignedPatient[58,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
    667 assignedPatient[59,2,4]
                     *              0             0             1 
    668 assignedPatient[60,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
    669 assignedPatient[61,2,4]
                     *              0             0             1 
    670 assignedPatient[62,2,4]
@@ -1691,9 +1581,9 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    683 assignedPatient[75,2,4]
                     *              0             0             1 
    684 assignedPatient[76,2,4]
-                    *              1             0             1 
-   685 assignedPatient[1,2,5]
                     *              0             0             1 
+   685 assignedPatient[1,2,5]
+                    *              1             0             1 
    686 assignedPatient[2,2,5]
                     *              0             0             1 
    687 assignedPatient[3,2,5]
@@ -1709,7 +1599,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    692 assignedPatient[8,2,5]
                     *              0             0             1 
    693 assignedPatient[9,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
    694 assignedPatient[10,2,5]
                     *              0             0             1 
    695 assignedPatient[11,2,5]
@@ -1775,7 +1665,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    725 assignedPatient[41,2,5]
                     *              0             0             1 
    726 assignedPatient[42,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
    727 assignedPatient[43,2,5]
                     *              0             0             1 
    728 assignedPatient[44,2,5]
@@ -1805,7 +1695,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    740 assignedPatient[56,2,5]
                     *              0             0             1 
    741 assignedPatient[57,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
    742 assignedPatient[58,2,5]
                     *              0             0             1 
    743 assignedPatient[59,2,5]
@@ -1825,7 +1715,7 @@ Objective:  objectiveFunction = 740936 (MAXimum)
    750 assignedPatient[66,2,5]
                     *              0             0             1 
    751 assignedPatient[67,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
    752 assignedPatient[68,2,5]
                     *              0             0             1 
    753 assignedPatient[69,2,5]
@@ -1846,144 +1736,1544 @@ Objective:  objectiveFunction = 740936 (MAXimum)
                     *              0             0             1 
    761 assignedBlock[1,1,1,1]
                     *              1             0             1 
-   762 assignedBlock[1,1,1,2]
+   762 assignedBlock[1,2,1,1]
                     *              1             0             1 
-   763 assignedBlock[1,1,1,3]
+   763 assignedBlock[1,3,1,1]
                     *              1             0             1 
-   764 assignedBlock[1,1,1,4]
+   764 assignedBlock[1,4,1,1]
                     *              1             0             1 
-   765 assignedBlock[1,1,1,5]
+   765 assignedBlock[1,5,1,1]
                     *              1             0             1 
-   766 assignedBlock[1,1,2,1]
+   766 assignedBlock[1,6,1,1]
                     *              1             0             1 
-   767 assignedBlock[1,1,2,2]
-                    *              1             0             1 
-   768 assignedBlock[1,1,2,3]
-                    *              1             0             1 
-   769 assignedBlock[1,1,2,4]
-                    *              1             0             1 
-   770 assignedBlock[1,1,2,5]
-                    *              1             0             1 
-   771 assignedBlock[2,1,1,1]
-                    *              1             0             1 
-   772 assignedBlock[2,1,1,2]
-                    *              1             0             1 
-   773 assignedBlock[2,1,1,3]
-                    *              1             0             1 
-   774 assignedBlock[2,1,1,4]
-                    *              1             0             1 
-   775 assignedBlock[2,1,1,5]
-                    *              1             0             1 
-   776 assignedBlock[2,1,2,1]
+   767 assignedBlock[1,7,1,1]
                     *              0             0             1 
-   777 assignedBlock[2,1,2,2]
+   768 assignedBlock[1,8,1,1]
                     *              0             0             1 
-   778 assignedBlock[2,1,2,3]
+   769 assignedBlock[1,9,1,1]
                     *              0             0             1 
-   779 assignedBlock[2,1,2,4]
+   770 assignedBlock[1,10,1,1]
                     *              0             0             1 
-   780 assignedBlock[2,1,2,5]
+   771 assignedBlock[1,11,1,1]
                     *              0             0             1 
-   781 assignedBlock[3,1,1,1]
+   772 assignedBlock[1,1,1,2]
                     *              1             0             1 
-   782 assignedBlock[3,1,1,2]
+   773 assignedBlock[1,2,1,2]
                     *              1             0             1 
-   783 assignedBlock[3,1,1,3]
+   774 assignedBlock[1,3,1,2]
                     *              1             0             1 
-   784 assignedBlock[3,1,1,4]
+   775 assignedBlock[1,4,1,2]
                     *              1             0             1 
-   785 assignedBlock[3,1,1,5]
+   776 assignedBlock[1,5,1,2]
                     *              1             0             1 
-   786 assignedBlock[3,1,2,1]
+   777 assignedBlock[1,6,1,2]
                     *              1             0             1 
-   787 assignedBlock[3,1,2,2]
+   778 assignedBlock[1,7,1,2]
                     *              1             0             1 
-   788 assignedBlock[3,1,2,3]
-                    *              1             0             1 
-   789 assignedBlock[3,1,2,4]
-                    *              1             0             1 
-   790 assignedBlock[3,1,2,5]
-                    *              1             0             1 
-   791 assignedBlock[4,1,1,1]
+   779 assignedBlock[1,8,1,2]
                     *              0             0             1 
-   792 assignedBlock[4,1,1,2]
-                    *              1             0             1 
-   793 assignedBlock[4,1,1,3]
-                    *              1             0             1 
-   794 assignedBlock[4,1,1,4]
-                    *              1             0             1 
-   795 assignedBlock[4,1,1,5]
+   780 assignedBlock[1,9,1,2]
                     *              0             0             1 
-   796 assignedBlock[4,1,2,1]
+   781 assignedBlock[1,10,1,2]
                     *              0             0             1 
-   797 assignedBlock[4,1,2,2]
+   782 assignedBlock[1,11,1,2]
                     *              0             0             1 
-   798 assignedBlock[4,1,2,3]
+   783 assignedBlock[1,1,1,3]
+                    *              1             0             1 
+   784 assignedBlock[1,2,1,3]
+                    *              1             0             1 
+   785 assignedBlock[1,3,1,3]
+                    *              1             0             1 
+   786 assignedBlock[1,4,1,3]
+                    *              1             0             1 
+   787 assignedBlock[1,5,1,3]
+                    *              1             0             1 
+   788 assignedBlock[1,6,1,3]
+                    *              1             0             1 
+   789 assignedBlock[1,7,1,3]
+                    *              1             0             1 
+   790 assignedBlock[1,8,1,3]
+                    *              1             0             1 
+   791 assignedBlock[1,9,1,3]
                     *              0             0             1 
-   799 assignedBlock[4,1,2,4]
+   792 assignedBlock[1,10,1,3]
                     *              0             0             1 
-   800 assignedBlock[4,1,2,5]
+   793 assignedBlock[1,11,1,3]
                     *              0             0             1 
-   801 assignedBlock[5,1,1,1]
+   794 assignedBlock[1,1,1,4]
                     *              1             0             1 
-   802 assignedBlock[5,1,1,2]
+   795 assignedBlock[1,2,1,4]
                     *              1             0             1 
-   803 assignedBlock[5,1,1,3]
+   796 assignedBlock[1,3,1,4]
                     *              1             0             1 
-   804 assignedBlock[5,1,1,4]
+   797 assignedBlock[1,4,1,4]
                     *              1             0             1 
-   805 assignedBlock[5,1,1,5]
+   798 assignedBlock[1,5,1,4]
                     *              1             0             1 
-   806 assignedBlock[5,1,2,1]
+   799 assignedBlock[1,6,1,4]
+                    *              1             0             1 
+   800 assignedBlock[1,7,1,4]
+                    *              1             0             1 
+   801 assignedBlock[1,8,1,4]
                     *              0             0             1 
-   807 assignedBlock[5,1,2,2]
+   802 assignedBlock[1,9,1,4]
                     *              0             0             1 
-   808 assignedBlock[5,1,2,3]
+   803 assignedBlock[1,10,1,4]
                     *              0             0             1 
-   809 assignedBlock[5,1,2,4]
+   804 assignedBlock[1,11,1,4]
                     *              0             0             1 
-   810 assignedBlock[5,1,2,5]
+   805 assignedBlock[1,1,1,5]
+                    *              1             0             1 
+   806 assignedBlock[1,2,1,5]
+                    *              1             0             1 
+   807 assignedBlock[1,3,1,5]
+                    *              1             0             1 
+   808 assignedBlock[1,4,1,5]
+                    *              1             0             1 
+   809 assignedBlock[1,5,1,5]
+                    *              1             0             1 
+   810 assignedBlock[1,6,1,5]
+                    *              1             0             1 
+   811 assignedBlock[1,7,1,5]
                     *              0             0             1 
-   811 assignedBlock[6,1,1,1]
-                    *              1             0             1 
-   812 assignedBlock[6,1,1,2]
-                    *              1             0             1 
-   813 assignedBlock[6,1,1,3]
-                    *              1             0             1 
-   814 assignedBlock[6,1,1,4]
-                    *              1             0             1 
-   815 assignedBlock[6,1,1,5]
-                    *              1             0             1 
-   816 assignedBlock[6,1,2,1]
+   812 assignedBlock[1,8,1,5]
                     *              0             0             1 
-   817 assignedBlock[6,1,2,2]
+   813 assignedBlock[1,9,1,5]
                     *              0             0             1 
-   818 assignedBlock[6,1,2,3]
+   814 assignedBlock[1,10,1,5]
                     *              0             0             1 
-   819 assignedBlock[6,1,2,4]
+   815 assignedBlock[1,11,1,5]
                     *              0             0             1 
-   820 assignedBlock[6,1,2,5]
+   816 assignedBlock[1,1,2,1]
+                    *              1             0             1 
+   817 assignedBlock[1,2,2,1]
+                    *              1             0             1 
+   818 assignedBlock[1,3,2,1]
+                    *              1             0             1 
+   819 assignedBlock[1,4,2,1]
                     *              0             0             1 
-   821 assignedBlock[7,1,1,1]
-                    *              1             0             1 
-   822 assignedBlock[7,1,1,2]
-                    *              1             0             1 
-   823 assignedBlock[7,1,1,3]
-                    *              1             0             1 
-   824 assignedBlock[7,1,1,4]
-                    *              1             0             1 
-   825 assignedBlock[7,1,1,5]
-                    *              1             0             1 
-   826 assignedBlock[7,1,2,1]
-                    *              1             0             1 
-   827 assignedBlock[7,1,2,2]
+   820 assignedBlock[1,5,2,1]
                     *              0             0             1 
-   828 assignedBlock[7,1,2,3]
-                    *              1             0             1 
-   829 assignedBlock[7,1,2,4]
+   821 assignedBlock[1,6,2,1]
                     *              0             0             1 
-   830 assignedBlock[7,1,2,5]
+   822 assignedBlock[1,7,2,1]
+                    *              0             0             1 
+   823 assignedBlock[1,8,2,1]
+                    *              0             0             1 
+   824 assignedBlock[1,9,2,1]
+                    *              0             0             1 
+   825 assignedBlock[1,10,2,1]
+                    *              0             0             1 
+   826 assignedBlock[1,11,2,1]
+                    *              0             0             1 
+   827 assignedBlock[1,1,2,2]
                     *              1             0             1 
+   828 assignedBlock[1,2,2,2]
+                    *              1             0             1 
+   829 assignedBlock[1,3,2,2]
+                    *              0             0             1 
+   830 assignedBlock[1,4,2,2]
+                    *              0             0             1 
+   831 assignedBlock[1,5,2,2]
+                    *              0             0             1 
+   832 assignedBlock[1,6,2,2]
+                    *              0             0             1 
+   833 assignedBlock[1,7,2,2]
+                    *              0             0             1 
+   834 assignedBlock[1,8,2,2]
+                    *              0             0             1 
+   835 assignedBlock[1,9,2,2]
+                    *              0             0             1 
+   836 assignedBlock[1,10,2,2]
+                    *              0             0             1 
+   837 assignedBlock[1,11,2,2]
+                    *              0             0             1 
+   838 assignedBlock[1,1,2,3]
+                    *              1             0             1 
+   839 assignedBlock[1,2,2,3]
+                    *              1             0             1 
+   840 assignedBlock[1,3,2,3]
+                    *              1             0             1 
+   841 assignedBlock[1,4,2,3]
+                    *              0             0             1 
+   842 assignedBlock[1,5,2,3]
+                    *              0             0             1 
+   843 assignedBlock[1,6,2,3]
+                    *              0             0             1 
+   844 assignedBlock[1,7,2,3]
+                    *              0             0             1 
+   845 assignedBlock[1,8,2,3]
+                    *              0             0             1 
+   846 assignedBlock[1,9,2,3]
+                    *              0             0             1 
+   847 assignedBlock[1,10,2,3]
+                    *              0             0             1 
+   848 assignedBlock[1,11,2,3]
+                    *              0             0             1 
+   849 assignedBlock[1,1,2,4]
+                    *              1             0             1 
+   850 assignedBlock[1,2,2,4]
+                    *              1             0             1 
+   851 assignedBlock[1,3,2,4]
+                    *              0             0             1 
+   852 assignedBlock[1,4,2,4]
+                    *              0             0             1 
+   853 assignedBlock[1,5,2,4]
+                    *              0             0             1 
+   854 assignedBlock[1,6,2,4]
+                    *              0             0             1 
+   855 assignedBlock[1,7,2,4]
+                    *              0             0             1 
+   856 assignedBlock[1,8,2,4]
+                    *              0             0             1 
+   857 assignedBlock[1,9,2,4]
+                    *              0             0             1 
+   858 assignedBlock[1,10,2,4]
+                    *              0             0             1 
+   859 assignedBlock[1,11,2,4]
+                    *              0             0             1 
+   860 assignedBlock[1,1,2,5]
+                    *              1             0             1 
+   861 assignedBlock[1,2,2,5]
+                    *              1             0             1 
+   862 assignedBlock[1,3,2,5]
+                    *              1             0             1 
+   863 assignedBlock[1,4,2,5]
+                    *              0             0             1 
+   864 assignedBlock[1,5,2,5]
+                    *              0             0             1 
+   865 assignedBlock[1,6,2,5]
+                    *              0             0             1 
+   866 assignedBlock[1,7,2,5]
+                    *              0             0             1 
+   867 assignedBlock[1,8,2,5]
+                    *              0             0             1 
+   868 assignedBlock[1,9,2,5]
+                    *              0             0             1 
+   869 assignedBlock[1,10,2,5]
+                    *              0             0             1 
+   870 assignedBlock[1,11,2,5]
+                    *              0             0             1 
+   871 assignedBlock[2,1,1,1]
+                    *              0             0             1 
+   872 assignedBlock[2,2,1,1]
+                    *              0             0             1 
+   873 assignedBlock[2,3,1,1]
+                    *              0             0             1 
+   874 assignedBlock[2,4,1,1]
+                    *              0             0             1 
+   875 assignedBlock[2,5,1,1]
+                    *              0             0             1 
+   876 assignedBlock[2,6,1,1]
+                    *              0             0             1 
+   877 assignedBlock[2,7,1,1]
+                    *              0             0             1 
+   878 assignedBlock[2,8,1,1]
+                    *              0             0             1 
+   879 assignedBlock[2,9,1,1]
+                    *              0             0             1 
+   880 assignedBlock[2,10,1,1]
+                    *              0             0             1 
+   881 assignedBlock[2,11,1,1]
+                    *              0             0             1 
+   882 assignedBlock[2,1,1,2]
+                    *              0             0             1 
+   883 assignedBlock[2,2,1,2]
+                    *              0             0             1 
+   884 assignedBlock[2,3,1,2]
+                    *              0             0             1 
+   885 assignedBlock[2,4,1,2]
+                    *              0             0             1 
+   886 assignedBlock[2,5,1,2]
+                    *              0             0             1 
+   887 assignedBlock[2,6,1,2]
+                    *              0             0             1 
+   888 assignedBlock[2,7,1,2]
+                    *              0             0             1 
+   889 assignedBlock[2,8,1,2]
+                    *              0             0             1 
+   890 assignedBlock[2,9,1,2]
+                    *              0             0             1 
+   891 assignedBlock[2,10,1,2]
+                    *              0             0             1 
+   892 assignedBlock[2,11,1,2]
+                    *              0             0             1 
+   893 assignedBlock[2,1,1,3]
+                    *              0             0             1 
+   894 assignedBlock[2,2,1,3]
+                    *              0             0             1 
+   895 assignedBlock[2,3,1,3]
+                    *              0             0             1 
+   896 assignedBlock[2,4,1,3]
+                    *              0             0             1 
+   897 assignedBlock[2,5,1,3]
+                    *              0             0             1 
+   898 assignedBlock[2,6,1,3]
+                    *              0             0             1 
+   899 assignedBlock[2,7,1,3]
+                    *              0             0             1 
+   900 assignedBlock[2,8,1,3]
+                    *              0             0             1 
+   901 assignedBlock[2,9,1,3]
+                    *              0             0             1 
+   902 assignedBlock[2,10,1,3]
+                    *              0             0             1 
+   903 assignedBlock[2,11,1,3]
+                    *              0             0             1 
+   904 assignedBlock[2,1,1,4]
+                    *              0             0             1 
+   905 assignedBlock[2,2,1,4]
+                    *              0             0             1 
+   906 assignedBlock[2,3,1,4]
+                    *              0             0             1 
+   907 assignedBlock[2,4,1,4]
+                    *              0             0             1 
+   908 assignedBlock[2,5,1,4]
+                    *              0             0             1 
+   909 assignedBlock[2,6,1,4]
+                    *              0             0             1 
+   910 assignedBlock[2,7,1,4]
+                    *              0             0             1 
+   911 assignedBlock[2,8,1,4]
+                    *              0             0             1 
+   912 assignedBlock[2,9,1,4]
+                    *              0             0             1 
+   913 assignedBlock[2,10,1,4]
+                    *              0             0             1 
+   914 assignedBlock[2,11,1,4]
+                    *              0             0             1 
+   915 assignedBlock[2,1,1,5]
+                    *              0             0             1 
+   916 assignedBlock[2,2,1,5]
+                    *              0             0             1 
+   917 assignedBlock[2,3,1,5]
+                    *              0             0             1 
+   918 assignedBlock[2,4,1,5]
+                    *              0             0             1 
+   919 assignedBlock[2,5,1,5]
+                    *              0             0             1 
+   920 assignedBlock[2,6,1,5]
+                    *              0             0             1 
+   921 assignedBlock[2,7,1,5]
+                    *              0             0             1 
+   922 assignedBlock[2,8,1,5]
+                    *              0             0             1 
+   923 assignedBlock[2,9,1,5]
+                    *              0             0             1 
+   924 assignedBlock[2,10,1,5]
+                    *              0             0             1 
+   925 assignedBlock[2,11,1,5]
+                    *              0             0             1 
+   926 assignedBlock[2,1,2,1]
+                    *              0             0             1 
+   927 assignedBlock[2,2,2,1]
+                    *              0             0             1 
+   928 assignedBlock[2,3,2,1]
+                    *              0             0             1 
+   929 assignedBlock[2,4,2,1]
+                    *              0             0             1 
+   930 assignedBlock[2,5,2,1]
+                    *              0             0             1 
+   931 assignedBlock[2,6,2,1]
+                    *              0             0             1 
+   932 assignedBlock[2,7,2,1]
+                    *              0             0             1 
+   933 assignedBlock[2,8,2,1]
+                    *              0             0             1 
+   934 assignedBlock[2,9,2,1]
+                    *              0             0             1 
+   935 assignedBlock[2,10,2,1]
+                    *              0             0             1 
+   936 assignedBlock[2,11,2,1]
+                    *              0             0             1 
+   937 assignedBlock[2,1,2,2]
+                    *              0             0             1 
+   938 assignedBlock[2,2,2,2]
+                    *              0             0             1 
+   939 assignedBlock[2,3,2,2]
+                    *              0             0             1 
+   940 assignedBlock[2,4,2,2]
+                    *              0             0             1 
+   941 assignedBlock[2,5,2,2]
+                    *              0             0             1 
+   942 assignedBlock[2,6,2,2]
+                    *              0             0             1 
+   943 assignedBlock[2,7,2,2]
+                    *              0             0             1 
+   944 assignedBlock[2,8,2,2]
+                    *              0             0             1 
+   945 assignedBlock[2,9,2,2]
+                    *              0             0             1 
+   946 assignedBlock[2,10,2,2]
+                    *              0             0             1 
+   947 assignedBlock[2,11,2,2]
+                    *              0             0             1 
+   948 assignedBlock[2,1,2,3]
+                    *              0             0             1 
+   949 assignedBlock[2,2,2,3]
+                    *              0             0             1 
+   950 assignedBlock[2,3,2,3]
+                    *              0             0             1 
+   951 assignedBlock[2,4,2,3]
+                    *              0             0             1 
+   952 assignedBlock[2,5,2,3]
+                    *              0             0             1 
+   953 assignedBlock[2,6,2,3]
+                    *              0             0             1 
+   954 assignedBlock[2,7,2,3]
+                    *              0             0             1 
+   955 assignedBlock[2,8,2,3]
+                    *              0             0             1 
+   956 assignedBlock[2,9,2,3]
+                    *              0             0             1 
+   957 assignedBlock[2,10,2,3]
+                    *              0             0             1 
+   958 assignedBlock[2,11,2,3]
+                    *              0             0             1 
+   959 assignedBlock[2,1,2,4]
+                    *              0             0             1 
+   960 assignedBlock[2,2,2,4]
+                    *              0             0             1 
+   961 assignedBlock[2,3,2,4]
+                    *              0             0             1 
+   962 assignedBlock[2,4,2,4]
+                    *              0             0             1 
+   963 assignedBlock[2,5,2,4]
+                    *              0             0             1 
+   964 assignedBlock[2,6,2,4]
+                    *              0             0             1 
+   965 assignedBlock[2,7,2,4]
+                    *              0             0             1 
+   966 assignedBlock[2,8,2,4]
+                    *              0             0             1 
+   967 assignedBlock[2,9,2,4]
+                    *              0             0             1 
+   968 assignedBlock[2,10,2,4]
+                    *              0             0             1 
+   969 assignedBlock[2,11,2,4]
+                    *              0             0             1 
+   970 assignedBlock[2,1,2,5]
+                    *              0             0             1 
+   971 assignedBlock[2,2,2,5]
+                    *              0             0             1 
+   972 assignedBlock[2,3,2,5]
+                    *              0             0             1 
+   973 assignedBlock[2,4,2,5]
+                    *              0             0             1 
+   974 assignedBlock[2,5,2,5]
+                    *              0             0             1 
+   975 assignedBlock[2,6,2,5]
+                    *              0             0             1 
+   976 assignedBlock[2,7,2,5]
+                    *              0             0             1 
+   977 assignedBlock[2,8,2,5]
+                    *              0             0             1 
+   978 assignedBlock[2,9,2,5]
+                    *              0             0             1 
+   979 assignedBlock[2,10,2,5]
+                    *              0             0             1 
+   980 assignedBlock[2,11,2,5]
+                    *              0             0             1 
+   981 assignedBlock[3,1,1,1]
+                    *              0             0             1 
+   982 assignedBlock[3,2,1,1]
+                    *              0             0             1 
+   983 assignedBlock[3,3,1,1]
+                    *              0             0             1 
+   984 assignedBlock[3,4,1,1]
+                    *              0             0             1 
+   985 assignedBlock[3,5,1,1]
+                    *              0             0             1 
+   986 assignedBlock[3,6,1,1]
+                    *              0             0             1 
+   987 assignedBlock[3,7,1,1]
+                    *              0             0             1 
+   988 assignedBlock[3,8,1,1]
+                    *              0             0             1 
+   989 assignedBlock[3,9,1,1]
+                    *              0             0             1 
+   990 assignedBlock[3,10,1,1]
+                    *              0             0             1 
+   991 assignedBlock[3,11,1,1]
+                    *              0             0             1 
+   992 assignedBlock[3,1,1,2]
+                    *              0             0             1 
+   993 assignedBlock[3,2,1,2]
+                    *              0             0             1 
+   994 assignedBlock[3,3,1,2]
+                    *              0             0             1 
+   995 assignedBlock[3,4,1,2]
+                    *              0             0             1 
+   996 assignedBlock[3,5,1,2]
+                    *              0             0             1 
+   997 assignedBlock[3,6,1,2]
+                    *              0             0             1 
+   998 assignedBlock[3,7,1,2]
+                    *              0             0             1 
+   999 assignedBlock[3,8,1,2]
+                    *              0             0             1 
+  1000 assignedBlock[3,9,1,2]
+                    *              0             0             1 
+  1001 assignedBlock[3,10,1,2]
+                    *              0             0             1 
+  1002 assignedBlock[3,11,1,2]
+                    *              0             0             1 
+  1003 assignedBlock[3,1,1,3]
+                    *              0             0             1 
+  1004 assignedBlock[3,2,1,3]
+                    *              0             0             1 
+  1005 assignedBlock[3,3,1,3]
+                    *              0             0             1 
+  1006 assignedBlock[3,4,1,3]
+                    *              0             0             1 
+  1007 assignedBlock[3,5,1,3]
+                    *              0             0             1 
+  1008 assignedBlock[3,6,1,3]
+                    *              0             0             1 
+  1009 assignedBlock[3,7,1,3]
+                    *              0             0             1 
+  1010 assignedBlock[3,8,1,3]
+                    *              0             0             1 
+  1011 assignedBlock[3,9,1,3]
+                    *              0             0             1 
+  1012 assignedBlock[3,10,1,3]
+                    *              0             0             1 
+  1013 assignedBlock[3,11,1,3]
+                    *              0             0             1 
+  1014 assignedBlock[3,1,1,4]
+                    *              0             0             1 
+  1015 assignedBlock[3,2,1,4]
+                    *              0             0             1 
+  1016 assignedBlock[3,3,1,4]
+                    *              0             0             1 
+  1017 assignedBlock[3,4,1,4]
+                    *              0             0             1 
+  1018 assignedBlock[3,5,1,4]
+                    *              0             0             1 
+  1019 assignedBlock[3,6,1,4]
+                    *              0             0             1 
+  1020 assignedBlock[3,7,1,4]
+                    *              0             0             1 
+  1021 assignedBlock[3,8,1,4]
+                    *              0             0             1 
+  1022 assignedBlock[3,9,1,4]
+                    *              0             0             1 
+  1023 assignedBlock[3,10,1,4]
+                    *              0             0             1 
+  1024 assignedBlock[3,11,1,4]
+                    *              0             0             1 
+  1025 assignedBlock[3,1,1,5]
+                    *              0             0             1 
+  1026 assignedBlock[3,2,1,5]
+                    *              0             0             1 
+  1027 assignedBlock[3,3,1,5]
+                    *              0             0             1 
+  1028 assignedBlock[3,4,1,5]
+                    *              0             0             1 
+  1029 assignedBlock[3,5,1,5]
+                    *              0             0             1 
+  1030 assignedBlock[3,6,1,5]
+                    *              0             0             1 
+  1031 assignedBlock[3,7,1,5]
+                    *              0             0             1 
+  1032 assignedBlock[3,8,1,5]
+                    *              0             0             1 
+  1033 assignedBlock[3,9,1,5]
+                    *              0             0             1 
+  1034 assignedBlock[3,10,1,5]
+                    *              0             0             1 
+  1035 assignedBlock[3,11,1,5]
+                    *              0             0             1 
+  1036 assignedBlock[3,1,2,1]
+                    *              0             0             1 
+  1037 assignedBlock[3,2,2,1]
+                    *              0             0             1 
+  1038 assignedBlock[3,3,2,1]
+                    *              0             0             1 
+  1039 assignedBlock[3,4,2,1]
+                    *              0             0             1 
+  1040 assignedBlock[3,5,2,1]
+                    *              0             0             1 
+  1041 assignedBlock[3,6,2,1]
+                    *              0             0             1 
+  1042 assignedBlock[3,7,2,1]
+                    *              0             0             1 
+  1043 assignedBlock[3,8,2,1]
+                    *              0             0             1 
+  1044 assignedBlock[3,9,2,1]
+                    *              0             0             1 
+  1045 assignedBlock[3,10,2,1]
+                    *              0             0             1 
+  1046 assignedBlock[3,11,2,1]
+                    *              0             0             1 
+  1047 assignedBlock[3,1,2,2]
+                    *              0             0             1 
+  1048 assignedBlock[3,2,2,2]
+                    *              0             0             1 
+  1049 assignedBlock[3,3,2,2]
+                    *              0             0             1 
+  1050 assignedBlock[3,4,2,2]
+                    *              0             0             1 
+  1051 assignedBlock[3,5,2,2]
+                    *              0             0             1 
+  1052 assignedBlock[3,6,2,2]
+                    *              0             0             1 
+  1053 assignedBlock[3,7,2,2]
+                    *              0             0             1 
+  1054 assignedBlock[3,8,2,2]
+                    *              0             0             1 
+  1055 assignedBlock[3,9,2,2]
+                    *              0             0             1 
+  1056 assignedBlock[3,10,2,2]
+                    *              0             0             1 
+  1057 assignedBlock[3,11,2,2]
+                    *              0             0             1 
+  1058 assignedBlock[3,1,2,3]
+                    *              0             0             1 
+  1059 assignedBlock[3,2,2,3]
+                    *              0             0             1 
+  1060 assignedBlock[3,3,2,3]
+                    *              0             0             1 
+  1061 assignedBlock[3,4,2,3]
+                    *              0             0             1 
+  1062 assignedBlock[3,5,2,3]
+                    *              0             0             1 
+  1063 assignedBlock[3,6,2,3]
+                    *              0             0             1 
+  1064 assignedBlock[3,7,2,3]
+                    *              0             0             1 
+  1065 assignedBlock[3,8,2,3]
+                    *              0             0             1 
+  1066 assignedBlock[3,9,2,3]
+                    *              0             0             1 
+  1067 assignedBlock[3,10,2,3]
+                    *              0             0             1 
+  1068 assignedBlock[3,11,2,3]
+                    *              0             0             1 
+  1069 assignedBlock[3,1,2,4]
+                    *              0             0             1 
+  1070 assignedBlock[3,2,2,4]
+                    *              0             0             1 
+  1071 assignedBlock[3,3,2,4]
+                    *              0             0             1 
+  1072 assignedBlock[3,4,2,4]
+                    *              0             0             1 
+  1073 assignedBlock[3,5,2,4]
+                    *              0             0             1 
+  1074 assignedBlock[3,6,2,4]
+                    *              0             0             1 
+  1075 assignedBlock[3,7,2,4]
+                    *              0             0             1 
+  1076 assignedBlock[3,8,2,4]
+                    *              0             0             1 
+  1077 assignedBlock[3,9,2,4]
+                    *              0             0             1 
+  1078 assignedBlock[3,10,2,4]
+                    *              0             0             1 
+  1079 assignedBlock[3,11,2,4]
+                    *              0             0             1 
+  1080 assignedBlock[3,1,2,5]
+                    *              0             0             1 
+  1081 assignedBlock[3,2,2,5]
+                    *              0             0             1 
+  1082 assignedBlock[3,3,2,5]
+                    *              0             0             1 
+  1083 assignedBlock[3,4,2,5]
+                    *              0             0             1 
+  1084 assignedBlock[3,5,2,5]
+                    *              0             0             1 
+  1085 assignedBlock[3,6,2,5]
+                    *              0             0             1 
+  1086 assignedBlock[3,7,2,5]
+                    *              0             0             1 
+  1087 assignedBlock[3,8,2,5]
+                    *              0             0             1 
+  1088 assignedBlock[3,9,2,5]
+                    *              0             0             1 
+  1089 assignedBlock[3,10,2,5]
+                    *              0             0             1 
+  1090 assignedBlock[3,11,2,5]
+                    *              0             0             1 
+  1091 assignedBlock[4,1,1,1]
+                    *              0             0             1 
+  1092 assignedBlock[4,2,1,1]
+                    *              0             0             1 
+  1093 assignedBlock[4,3,1,1]
+                    *              0             0             1 
+  1094 assignedBlock[4,4,1,1]
+                    *              0             0             1 
+  1095 assignedBlock[4,5,1,1]
+                    *              0             0             1 
+  1096 assignedBlock[4,6,1,1]
+                    *              0             0             1 
+  1097 assignedBlock[4,7,1,1]
+                    *              0             0             1 
+  1098 assignedBlock[4,8,1,1]
+                    *              0             0             1 
+  1099 assignedBlock[4,9,1,1]
+                    *              0             0             1 
+  1100 assignedBlock[4,10,1,1]
+                    *              0             0             1 
+  1101 assignedBlock[4,11,1,1]
+                    *              0             0             1 
+  1102 assignedBlock[4,1,1,2]
+                    *              0             0             1 
+  1103 assignedBlock[4,2,1,2]
+                    *              0             0             1 
+  1104 assignedBlock[4,3,1,2]
+                    *              0             0             1 
+  1105 assignedBlock[4,4,1,2]
+                    *              0             0             1 
+  1106 assignedBlock[4,5,1,2]
+                    *              0             0             1 
+  1107 assignedBlock[4,6,1,2]
+                    *              0             0             1 
+  1108 assignedBlock[4,7,1,2]
+                    *              0             0             1 
+  1109 assignedBlock[4,8,1,2]
+                    *              0             0             1 
+  1110 assignedBlock[4,9,1,2]
+                    *              0             0             1 
+  1111 assignedBlock[4,10,1,2]
+                    *              0             0             1 
+  1112 assignedBlock[4,11,1,2]
+                    *              0             0             1 
+  1113 assignedBlock[4,1,1,3]
+                    *              0             0             1 
+  1114 assignedBlock[4,2,1,3]
+                    *              0             0             1 
+  1115 assignedBlock[4,3,1,3]
+                    *              0             0             1 
+  1116 assignedBlock[4,4,1,3]
+                    *              0             0             1 
+  1117 assignedBlock[4,5,1,3]
+                    *              0             0             1 
+  1118 assignedBlock[4,6,1,3]
+                    *              0             0             1 
+  1119 assignedBlock[4,7,1,3]
+                    *              0             0             1 
+  1120 assignedBlock[4,8,1,3]
+                    *              0             0             1 
+  1121 assignedBlock[4,9,1,3]
+                    *              0             0             1 
+  1122 assignedBlock[4,10,1,3]
+                    *              0             0             1 
+  1123 assignedBlock[4,11,1,3]
+                    *              0             0             1 
+  1124 assignedBlock[4,1,1,4]
+                    *              0             0             1 
+  1125 assignedBlock[4,2,1,4]
+                    *              0             0             1 
+  1126 assignedBlock[4,3,1,4]
+                    *              0             0             1 
+  1127 assignedBlock[4,4,1,4]
+                    *              0             0             1 
+  1128 assignedBlock[4,5,1,4]
+                    *              0             0             1 
+  1129 assignedBlock[4,6,1,4]
+                    *              0             0             1 
+  1130 assignedBlock[4,7,1,4]
+                    *              0             0             1 
+  1131 assignedBlock[4,8,1,4]
+                    *              0             0             1 
+  1132 assignedBlock[4,9,1,4]
+                    *              0             0             1 
+  1133 assignedBlock[4,10,1,4]
+                    *              0             0             1 
+  1134 assignedBlock[4,11,1,4]
+                    *              0             0             1 
+  1135 assignedBlock[4,1,1,5]
+                    *              0             0             1 
+  1136 assignedBlock[4,2,1,5]
+                    *              0             0             1 
+  1137 assignedBlock[4,3,1,5]
+                    *              0             0             1 
+  1138 assignedBlock[4,4,1,5]
+                    *              0             0             1 
+  1139 assignedBlock[4,5,1,5]
+                    *              0             0             1 
+  1140 assignedBlock[4,6,1,5]
+                    *              0             0             1 
+  1141 assignedBlock[4,7,1,5]
+                    *              0             0             1 
+  1142 assignedBlock[4,8,1,5]
+                    *              0             0             1 
+  1143 assignedBlock[4,9,1,5]
+                    *              0             0             1 
+  1144 assignedBlock[4,10,1,5]
+                    *              0             0             1 
+  1145 assignedBlock[4,11,1,5]
+                    *              0             0             1 
+  1146 assignedBlock[4,1,2,1]
+                    *              0             0             1 
+  1147 assignedBlock[4,2,2,1]
+                    *              0             0             1 
+  1148 assignedBlock[4,3,2,1]
+                    *              0             0             1 
+  1149 assignedBlock[4,4,2,1]
+                    *              0             0             1 
+  1150 assignedBlock[4,5,2,1]
+                    *              0             0             1 
+  1151 assignedBlock[4,6,2,1]
+                    *              0             0             1 
+  1152 assignedBlock[4,7,2,1]
+                    *              0             0             1 
+  1153 assignedBlock[4,8,2,1]
+                    *              0             0             1 
+  1154 assignedBlock[4,9,2,1]
+                    *              0             0             1 
+  1155 assignedBlock[4,10,2,1]
+                    *              0             0             1 
+  1156 assignedBlock[4,11,2,1]
+                    *              0             0             1 
+  1157 assignedBlock[4,1,2,2]
+                    *              0             0             1 
+  1158 assignedBlock[4,2,2,2]
+                    *              0             0             1 
+  1159 assignedBlock[4,3,2,2]
+                    *              0             0             1 
+  1160 assignedBlock[4,4,2,2]
+                    *              0             0             1 
+  1161 assignedBlock[4,5,2,2]
+                    *              0             0             1 
+  1162 assignedBlock[4,6,2,2]
+                    *              0             0             1 
+  1163 assignedBlock[4,7,2,2]
+                    *              0             0             1 
+  1164 assignedBlock[4,8,2,2]
+                    *              0             0             1 
+  1165 assignedBlock[4,9,2,2]
+                    *              0             0             1 
+  1166 assignedBlock[4,10,2,2]
+                    *              0             0             1 
+  1167 assignedBlock[4,11,2,2]
+                    *              0             0             1 
+  1168 assignedBlock[4,1,2,3]
+                    *              0             0             1 
+  1169 assignedBlock[4,2,2,3]
+                    *              0             0             1 
+  1170 assignedBlock[4,3,2,3]
+                    *              0             0             1 
+  1171 assignedBlock[4,4,2,3]
+                    *              0             0             1 
+  1172 assignedBlock[4,5,2,3]
+                    *              0             0             1 
+  1173 assignedBlock[4,6,2,3]
+                    *              0             0             1 
+  1174 assignedBlock[4,7,2,3]
+                    *              0             0             1 
+  1175 assignedBlock[4,8,2,3]
+                    *              0             0             1 
+  1176 assignedBlock[4,9,2,3]
+                    *              0             0             1 
+  1177 assignedBlock[4,10,2,3]
+                    *              0             0             1 
+  1178 assignedBlock[4,11,2,3]
+                    *              0             0             1 
+  1179 assignedBlock[4,1,2,4]
+                    *              0             0             1 
+  1180 assignedBlock[4,2,2,4]
+                    *              0             0             1 
+  1181 assignedBlock[4,3,2,4]
+                    *              0             0             1 
+  1182 assignedBlock[4,4,2,4]
+                    *              0             0             1 
+  1183 assignedBlock[4,5,2,4]
+                    *              0             0             1 
+  1184 assignedBlock[4,6,2,4]
+                    *              0             0             1 
+  1185 assignedBlock[4,7,2,4]
+                    *              0             0             1 
+  1186 assignedBlock[4,8,2,4]
+                    *              0             0             1 
+  1187 assignedBlock[4,9,2,4]
+                    *              0             0             1 
+  1188 assignedBlock[4,10,2,4]
+                    *              0             0             1 
+  1189 assignedBlock[4,11,2,4]
+                    *              0             0             1 
+  1190 assignedBlock[4,1,2,5]
+                    *              0             0             1 
+  1191 assignedBlock[4,2,2,5]
+                    *              0             0             1 
+  1192 assignedBlock[4,3,2,5]
+                    *              0             0             1 
+  1193 assignedBlock[4,4,2,5]
+                    *              0             0             1 
+  1194 assignedBlock[4,5,2,5]
+                    *              0             0             1 
+  1195 assignedBlock[4,6,2,5]
+                    *              0             0             1 
+  1196 assignedBlock[4,7,2,5]
+                    *              0             0             1 
+  1197 assignedBlock[4,8,2,5]
+                    *              0             0             1 
+  1198 assignedBlock[4,9,2,5]
+                    *              0             0             1 
+  1199 assignedBlock[4,10,2,5]
+                    *              0             0             1 
+  1200 assignedBlock[4,11,2,5]
+                    *              0             0             1 
+  1201 assignedBlock[5,1,1,1]
+                    *              0             0             1 
+  1202 assignedBlock[5,2,1,1]
+                    *              0             0             1 
+  1203 assignedBlock[5,3,1,1]
+                    *              0             0             1 
+  1204 assignedBlock[5,4,1,1]
+                    *              0             0             1 
+  1205 assignedBlock[5,5,1,1]
+                    *              0             0             1 
+  1206 assignedBlock[5,6,1,1]
+                    *              0             0             1 
+  1207 assignedBlock[5,7,1,1]
+                    *              0             0             1 
+  1208 assignedBlock[5,8,1,1]
+                    *              0             0             1 
+  1209 assignedBlock[5,9,1,1]
+                    *              0             0             1 
+  1210 assignedBlock[5,10,1,1]
+                    *              0             0             1 
+  1211 assignedBlock[5,11,1,1]
+                    *              0             0             1 
+  1212 assignedBlock[5,1,1,2]
+                    *              0             0             1 
+  1213 assignedBlock[5,2,1,2]
+                    *              0             0             1 
+  1214 assignedBlock[5,3,1,2]
+                    *              0             0             1 
+  1215 assignedBlock[5,4,1,2]
+                    *              0             0             1 
+  1216 assignedBlock[5,5,1,2]
+                    *              0             0             1 
+  1217 assignedBlock[5,6,1,2]
+                    *              0             0             1 
+  1218 assignedBlock[5,7,1,2]
+                    *              0             0             1 
+  1219 assignedBlock[5,8,1,2]
+                    *              0             0             1 
+  1220 assignedBlock[5,9,1,2]
+                    *              0             0             1 
+  1221 assignedBlock[5,10,1,2]
+                    *              0             0             1 
+  1222 assignedBlock[5,11,1,2]
+                    *              0             0             1 
+  1223 assignedBlock[5,1,1,3]
+                    *              0             0             1 
+  1224 assignedBlock[5,2,1,3]
+                    *              0             0             1 
+  1225 assignedBlock[5,3,1,3]
+                    *              0             0             1 
+  1226 assignedBlock[5,4,1,3]
+                    *              0             0             1 
+  1227 assignedBlock[5,5,1,3]
+                    *              0             0             1 
+  1228 assignedBlock[5,6,1,3]
+                    *              0             0             1 
+  1229 assignedBlock[5,7,1,3]
+                    *              0             0             1 
+  1230 assignedBlock[5,8,1,3]
+                    *              0             0             1 
+  1231 assignedBlock[5,9,1,3]
+                    *              0             0             1 
+  1232 assignedBlock[5,10,1,3]
+                    *              0             0             1 
+  1233 assignedBlock[5,11,1,3]
+                    *              0             0             1 
+  1234 assignedBlock[5,1,1,4]
+                    *              0             0             1 
+  1235 assignedBlock[5,2,1,4]
+                    *              0             0             1 
+  1236 assignedBlock[5,3,1,4]
+                    *              0             0             1 
+  1237 assignedBlock[5,4,1,4]
+                    *              0             0             1 
+  1238 assignedBlock[5,5,1,4]
+                    *              0             0             1 
+  1239 assignedBlock[5,6,1,4]
+                    *              0             0             1 
+  1240 assignedBlock[5,7,1,4]
+                    *              0             0             1 
+  1241 assignedBlock[5,8,1,4]
+                    *              0             0             1 
+  1242 assignedBlock[5,9,1,4]
+                    *              0             0             1 
+  1243 assignedBlock[5,10,1,4]
+                    *              0             0             1 
+  1244 assignedBlock[5,11,1,4]
+                    *              0             0             1 
+  1245 assignedBlock[5,1,1,5]
+                    *              0             0             1 
+  1246 assignedBlock[5,2,1,5]
+                    *              0             0             1 
+  1247 assignedBlock[5,3,1,5]
+                    *              0             0             1 
+  1248 assignedBlock[5,4,1,5]
+                    *              0             0             1 
+  1249 assignedBlock[5,5,1,5]
+                    *              0             0             1 
+  1250 assignedBlock[5,6,1,5]
+                    *              0             0             1 
+  1251 assignedBlock[5,7,1,5]
+                    *              0             0             1 
+  1252 assignedBlock[5,8,1,5]
+                    *              0             0             1 
+  1253 assignedBlock[5,9,1,5]
+                    *              0             0             1 
+  1254 assignedBlock[5,10,1,5]
+                    *              0             0             1 
+  1255 assignedBlock[5,11,1,5]
+                    *              0             0             1 
+  1256 assignedBlock[5,1,2,1]
+                    *              0             0             1 
+  1257 assignedBlock[5,2,2,1]
+                    *              0             0             1 
+  1258 assignedBlock[5,3,2,1]
+                    *              0             0             1 
+  1259 assignedBlock[5,4,2,1]
+                    *              0             0             1 
+  1260 assignedBlock[5,5,2,1]
+                    *              0             0             1 
+  1261 assignedBlock[5,6,2,1]
+                    *              0             0             1 
+  1262 assignedBlock[5,7,2,1]
+                    *              0             0             1 
+  1263 assignedBlock[5,8,2,1]
+                    *              0             0             1 
+  1264 assignedBlock[5,9,2,1]
+                    *              0             0             1 
+  1265 assignedBlock[5,10,2,1]
+                    *              0             0             1 
+  1266 assignedBlock[5,11,2,1]
+                    *              0             0             1 
+  1267 assignedBlock[5,1,2,2]
+                    *              0             0             1 
+  1268 assignedBlock[5,2,2,2]
+                    *              0             0             1 
+  1269 assignedBlock[5,3,2,2]
+                    *              0             0             1 
+  1270 assignedBlock[5,4,2,2]
+                    *              0             0             1 
+  1271 assignedBlock[5,5,2,2]
+                    *              0             0             1 
+  1272 assignedBlock[5,6,2,2]
+                    *              0             0             1 
+  1273 assignedBlock[5,7,2,2]
+                    *              0             0             1 
+  1274 assignedBlock[5,8,2,2]
+                    *              0             0             1 
+  1275 assignedBlock[5,9,2,2]
+                    *              0             0             1 
+  1276 assignedBlock[5,10,2,2]
+                    *              0             0             1 
+  1277 assignedBlock[5,11,2,2]
+                    *              0             0             1 
+  1278 assignedBlock[5,1,2,3]
+                    *              0             0             1 
+  1279 assignedBlock[5,2,2,3]
+                    *              0             0             1 
+  1280 assignedBlock[5,3,2,3]
+                    *              0             0             1 
+  1281 assignedBlock[5,4,2,3]
+                    *              0             0             1 
+  1282 assignedBlock[5,5,2,3]
+                    *              0             0             1 
+  1283 assignedBlock[5,6,2,3]
+                    *              0             0             1 
+  1284 assignedBlock[5,7,2,3]
+                    *              0             0             1 
+  1285 assignedBlock[5,8,2,3]
+                    *              0             0             1 
+  1286 assignedBlock[5,9,2,3]
+                    *              0             0             1 
+  1287 assignedBlock[5,10,2,3]
+                    *              0             0             1 
+  1288 assignedBlock[5,11,2,3]
+                    *              0             0             1 
+  1289 assignedBlock[5,1,2,4]
+                    *              0             0             1 
+  1290 assignedBlock[5,2,2,4]
+                    *              0             0             1 
+  1291 assignedBlock[5,3,2,4]
+                    *              0             0             1 
+  1292 assignedBlock[5,4,2,4]
+                    *              0             0             1 
+  1293 assignedBlock[5,5,2,4]
+                    *              0             0             1 
+  1294 assignedBlock[5,6,2,4]
+                    *              0             0             1 
+  1295 assignedBlock[5,7,2,4]
+                    *              0             0             1 
+  1296 assignedBlock[5,8,2,4]
+                    *              0             0             1 
+  1297 assignedBlock[5,9,2,4]
+                    *              0             0             1 
+  1298 assignedBlock[5,10,2,4]
+                    *              0             0             1 
+  1299 assignedBlock[5,11,2,4]
+                    *              0             0             1 
+  1300 assignedBlock[5,1,2,5]
+                    *              0             0             1 
+  1301 assignedBlock[5,2,2,5]
+                    *              0             0             1 
+  1302 assignedBlock[5,3,2,5]
+                    *              0             0             1 
+  1303 assignedBlock[5,4,2,5]
+                    *              0             0             1 
+  1304 assignedBlock[5,5,2,5]
+                    *              0             0             1 
+  1305 assignedBlock[5,6,2,5]
+                    *              0             0             1 
+  1306 assignedBlock[5,7,2,5]
+                    *              0             0             1 
+  1307 assignedBlock[5,8,2,5]
+                    *              0             0             1 
+  1308 assignedBlock[5,9,2,5]
+                    *              0             0             1 
+  1309 assignedBlock[5,10,2,5]
+                    *              0             0             1 
+  1310 assignedBlock[5,11,2,5]
+                    *              0             0             1 
+  1311 assignedBlock[6,1,1,1]
+                    *              0             0             1 
+  1312 assignedBlock[6,2,1,1]
+                    *              0             0             1 
+  1313 assignedBlock[6,3,1,1]
+                    *              0             0             1 
+  1314 assignedBlock[6,4,1,1]
+                    *              0             0             1 
+  1315 assignedBlock[6,5,1,1]
+                    *              0             0             1 
+  1316 assignedBlock[6,6,1,1]
+                    *              0             0             1 
+  1317 assignedBlock[6,7,1,1]
+                    *              0             0             1 
+  1318 assignedBlock[6,8,1,1]
+                    *              0             0             1 
+  1319 assignedBlock[6,9,1,1]
+                    *              0             0             1 
+  1320 assignedBlock[6,10,1,1]
+                    *              0             0             1 
+  1321 assignedBlock[6,11,1,1]
+                    *              0             0             1 
+  1322 assignedBlock[6,1,1,2]
+                    *              0             0             1 
+  1323 assignedBlock[6,2,1,2]
+                    *              0             0             1 
+  1324 assignedBlock[6,3,1,2]
+                    *              0             0             1 
+  1325 assignedBlock[6,4,1,2]
+                    *              0             0             1 
+  1326 assignedBlock[6,5,1,2]
+                    *              0             0             1 
+  1327 assignedBlock[6,6,1,2]
+                    *              0             0             1 
+  1328 assignedBlock[6,7,1,2]
+                    *              0             0             1 
+  1329 assignedBlock[6,8,1,2]
+                    *              0             0             1 
+  1330 assignedBlock[6,9,1,2]
+                    *              0             0             1 
+  1331 assignedBlock[6,10,1,2]
+                    *              0             0             1 
+  1332 assignedBlock[6,11,1,2]
+                    *              0             0             1 
+  1333 assignedBlock[6,1,1,3]
+                    *              0             0             1 
+  1334 assignedBlock[6,2,1,3]
+                    *              0             0             1 
+  1335 assignedBlock[6,3,1,3]
+                    *              0             0             1 
+  1336 assignedBlock[6,4,1,3]
+                    *              0             0             1 
+  1337 assignedBlock[6,5,1,3]
+                    *              0             0             1 
+  1338 assignedBlock[6,6,1,3]
+                    *              0             0             1 
+  1339 assignedBlock[6,7,1,3]
+                    *              0             0             1 
+  1340 assignedBlock[6,8,1,3]
+                    *              0             0             1 
+  1341 assignedBlock[6,9,1,3]
+                    *              0             0             1 
+  1342 assignedBlock[6,10,1,3]
+                    *              0             0             1 
+  1343 assignedBlock[6,11,1,3]
+                    *              0             0             1 
+  1344 assignedBlock[6,1,1,4]
+                    *              0             0             1 
+  1345 assignedBlock[6,2,1,4]
+                    *              0             0             1 
+  1346 assignedBlock[6,3,1,4]
+                    *              0             0             1 
+  1347 assignedBlock[6,4,1,4]
+                    *              0             0             1 
+  1348 assignedBlock[6,5,1,4]
+                    *              0             0             1 
+  1349 assignedBlock[6,6,1,4]
+                    *              0             0             1 
+  1350 assignedBlock[6,7,1,4]
+                    *              0             0             1 
+  1351 assignedBlock[6,8,1,4]
+                    *              0             0             1 
+  1352 assignedBlock[6,9,1,4]
+                    *              0             0             1 
+  1353 assignedBlock[6,10,1,4]
+                    *              0             0             1 
+  1354 assignedBlock[6,11,1,4]
+                    *              0             0             1 
+  1355 assignedBlock[6,1,1,5]
+                    *              0             0             1 
+  1356 assignedBlock[6,2,1,5]
+                    *              0             0             1 
+  1357 assignedBlock[6,3,1,5]
+                    *              0             0             1 
+  1358 assignedBlock[6,4,1,5]
+                    *              0             0             1 
+  1359 assignedBlock[6,5,1,5]
+                    *              0             0             1 
+  1360 assignedBlock[6,6,1,5]
+                    *              0             0             1 
+  1361 assignedBlock[6,7,1,5]
+                    *              0             0             1 
+  1362 assignedBlock[6,8,1,5]
+                    *              0             0             1 
+  1363 assignedBlock[6,9,1,5]
+                    *              0             0             1 
+  1364 assignedBlock[6,10,1,5]
+                    *              0             0             1 
+  1365 assignedBlock[6,11,1,5]
+                    *              0             0             1 
+  1366 assignedBlock[6,1,2,1]
+                    *              0             0             1 
+  1367 assignedBlock[6,2,2,1]
+                    *              0             0             1 
+  1368 assignedBlock[6,3,2,1]
+                    *              0             0             1 
+  1369 assignedBlock[6,4,2,1]
+                    *              0             0             1 
+  1370 assignedBlock[6,5,2,1]
+                    *              0             0             1 
+  1371 assignedBlock[6,6,2,1]
+                    *              0             0             1 
+  1372 assignedBlock[6,7,2,1]
+                    *              0             0             1 
+  1373 assignedBlock[6,8,2,1]
+                    *              0             0             1 
+  1374 assignedBlock[6,9,2,1]
+                    *              0             0             1 
+  1375 assignedBlock[6,10,2,1]
+                    *              0             0             1 
+  1376 assignedBlock[6,11,2,1]
+                    *              0             0             1 
+  1377 assignedBlock[6,1,2,2]
+                    *              0             0             1 
+  1378 assignedBlock[6,2,2,2]
+                    *              0             0             1 
+  1379 assignedBlock[6,3,2,2]
+                    *              0             0             1 
+  1380 assignedBlock[6,4,2,2]
+                    *              0             0             1 
+  1381 assignedBlock[6,5,2,2]
+                    *              0             0             1 
+  1382 assignedBlock[6,6,2,2]
+                    *              0             0             1 
+  1383 assignedBlock[6,7,2,2]
+                    *              0             0             1 
+  1384 assignedBlock[6,8,2,2]
+                    *              0             0             1 
+  1385 assignedBlock[6,9,2,2]
+                    *              0             0             1 
+  1386 assignedBlock[6,10,2,2]
+                    *              0             0             1 
+  1387 assignedBlock[6,11,2,2]
+                    *              0             0             1 
+  1388 assignedBlock[6,1,2,3]
+                    *              0             0             1 
+  1389 assignedBlock[6,2,2,3]
+                    *              0             0             1 
+  1390 assignedBlock[6,3,2,3]
+                    *              0             0             1 
+  1391 assignedBlock[6,4,2,3]
+                    *              0             0             1 
+  1392 assignedBlock[6,5,2,3]
+                    *              0             0             1 
+  1393 assignedBlock[6,6,2,3]
+                    *              0             0             1 
+  1394 assignedBlock[6,7,2,3]
+                    *              0             0             1 
+  1395 assignedBlock[6,8,2,3]
+                    *              0             0             1 
+  1396 assignedBlock[6,9,2,3]
+                    *              0             0             1 
+  1397 assignedBlock[6,10,2,3]
+                    *              0             0             1 
+  1398 assignedBlock[6,11,2,3]
+                    *              0             0             1 
+  1399 assignedBlock[6,1,2,4]
+                    *              0             0             1 
+  1400 assignedBlock[6,2,2,4]
+                    *              0             0             1 
+  1401 assignedBlock[6,3,2,4]
+                    *              0             0             1 
+  1402 assignedBlock[6,4,2,4]
+                    *              0             0             1 
+  1403 assignedBlock[6,5,2,4]
+                    *              0             0             1 
+  1404 assignedBlock[6,6,2,4]
+                    *              0             0             1 
+  1405 assignedBlock[6,7,2,4]
+                    *              0             0             1 
+  1406 assignedBlock[6,8,2,4]
+                    *              0             0             1 
+  1407 assignedBlock[6,9,2,4]
+                    *              0             0             1 
+  1408 assignedBlock[6,10,2,4]
+                    *              0             0             1 
+  1409 assignedBlock[6,11,2,4]
+                    *              0             0             1 
+  1410 assignedBlock[6,1,2,5]
+                    *              0             0             1 
+  1411 assignedBlock[6,2,2,5]
+                    *              0             0             1 
+  1412 assignedBlock[6,3,2,5]
+                    *              0             0             1 
+  1413 assignedBlock[6,4,2,5]
+                    *              0             0             1 
+  1414 assignedBlock[6,5,2,5]
+                    *              0             0             1 
+  1415 assignedBlock[6,6,2,5]
+                    *              0             0             1 
+  1416 assignedBlock[6,7,2,5]
+                    *              0             0             1 
+  1417 assignedBlock[6,8,2,5]
+                    *              0             0             1 
+  1418 assignedBlock[6,9,2,5]
+                    *              0             0             1 
+  1419 assignedBlock[6,10,2,5]
+                    *              0             0             1 
+  1420 assignedBlock[6,11,2,5]
+                    *              0             0             1 
+  1421 assignedBlock[7,1,1,1]
+                    *              0             0             1 
+  1422 assignedBlock[7,2,1,1]
+                    *              0             0             1 
+  1423 assignedBlock[7,3,1,1]
+                    *              0             0             1 
+  1424 assignedBlock[7,4,1,1]
+                    *              0             0             1 
+  1425 assignedBlock[7,5,1,1]
+                    *              0             0             1 
+  1426 assignedBlock[7,6,1,1]
+                    *              0             0             1 
+  1427 assignedBlock[7,7,1,1]
+                    *              0             0             1 
+  1428 assignedBlock[7,8,1,1]
+                    *              0             0             1 
+  1429 assignedBlock[7,9,1,1]
+                    *              0             0             1 
+  1430 assignedBlock[7,10,1,1]
+                    *              0             0             1 
+  1431 assignedBlock[7,11,1,1]
+                    *              0             0             1 
+  1432 assignedBlock[7,1,1,2]
+                    *              0             0             1 
+  1433 assignedBlock[7,2,1,2]
+                    *              0             0             1 
+  1434 assignedBlock[7,3,1,2]
+                    *              0             0             1 
+  1435 assignedBlock[7,4,1,2]
+                    *              0             0             1 
+  1436 assignedBlock[7,5,1,2]
+                    *              0             0             1 
+  1437 assignedBlock[7,6,1,2]
+                    *              0             0             1 
+  1438 assignedBlock[7,7,1,2]
+                    *              0             0             1 
+  1439 assignedBlock[7,8,1,2]
+                    *              0             0             1 
+  1440 assignedBlock[7,9,1,2]
+                    *              0             0             1 
+  1441 assignedBlock[7,10,1,2]
+                    *              0             0             1 
+  1442 assignedBlock[7,11,1,2]
+                    *              0             0             1 
+  1443 assignedBlock[7,1,1,3]
+                    *              0             0             1 
+  1444 assignedBlock[7,2,1,3]
+                    *              0             0             1 
+  1445 assignedBlock[7,3,1,3]
+                    *              0             0             1 
+  1446 assignedBlock[7,4,1,3]
+                    *              0             0             1 
+  1447 assignedBlock[7,5,1,3]
+                    *              0             0             1 
+  1448 assignedBlock[7,6,1,3]
+                    *              0             0             1 
+  1449 assignedBlock[7,7,1,3]
+                    *              0             0             1 
+  1450 assignedBlock[7,8,1,3]
+                    *              0             0             1 
+  1451 assignedBlock[7,9,1,3]
+                    *              0             0             1 
+  1452 assignedBlock[7,10,1,3]
+                    *              0             0             1 
+  1453 assignedBlock[7,11,1,3]
+                    *              0             0             1 
+  1454 assignedBlock[7,1,1,4]
+                    *              0             0             1 
+  1455 assignedBlock[7,2,1,4]
+                    *              0             0             1 
+  1456 assignedBlock[7,3,1,4]
+                    *              0             0             1 
+  1457 assignedBlock[7,4,1,4]
+                    *              0             0             1 
+  1458 assignedBlock[7,5,1,4]
+                    *              0             0             1 
+  1459 assignedBlock[7,6,1,4]
+                    *              0             0             1 
+  1460 assignedBlock[7,7,1,4]
+                    *              0             0             1 
+  1461 assignedBlock[7,8,1,4]
+                    *              0             0             1 
+  1462 assignedBlock[7,9,1,4]
+                    *              0             0             1 
+  1463 assignedBlock[7,10,1,4]
+                    *              0             0             1 
+  1464 assignedBlock[7,11,1,4]
+                    *              0             0             1 
+  1465 assignedBlock[7,1,1,5]
+                    *              0             0             1 
+  1466 assignedBlock[7,2,1,5]
+                    *              0             0             1 
+  1467 assignedBlock[7,3,1,5]
+                    *              0             0             1 
+  1468 assignedBlock[7,4,1,5]
+                    *              0             0             1 
+  1469 assignedBlock[7,5,1,5]
+                    *              0             0             1 
+  1470 assignedBlock[7,6,1,5]
+                    *              0             0             1 
+  1471 assignedBlock[7,7,1,5]
+                    *              0             0             1 
+  1472 assignedBlock[7,8,1,5]
+                    *              0             0             1 
+  1473 assignedBlock[7,9,1,5]
+                    *              0             0             1 
+  1474 assignedBlock[7,10,1,5]
+                    *              0             0             1 
+  1475 assignedBlock[7,11,1,5]
+                    *              0             0             1 
+  1476 assignedBlock[7,1,2,1]
+                    *              0             0             1 
+  1477 assignedBlock[7,2,2,1]
+                    *              0             0             1 
+  1478 assignedBlock[7,3,2,1]
+                    *              0             0             1 
+  1479 assignedBlock[7,4,2,1]
+                    *              0             0             1 
+  1480 assignedBlock[7,5,2,1]
+                    *              0             0             1 
+  1481 assignedBlock[7,6,2,1]
+                    *              0             0             1 
+  1482 assignedBlock[7,7,2,1]
+                    *              0             0             1 
+  1483 assignedBlock[7,8,2,1]
+                    *              0             0             1 
+  1484 assignedBlock[7,9,2,1]
+                    *              0             0             1 
+  1485 assignedBlock[7,10,2,1]
+                    *              0             0             1 
+  1486 assignedBlock[7,11,2,1]
+                    *              0             0             1 
+  1487 assignedBlock[7,1,2,2]
+                    *              0             0             1 
+  1488 assignedBlock[7,2,2,2]
+                    *              0             0             1 
+  1489 assignedBlock[7,3,2,2]
+                    *              0             0             1 
+  1490 assignedBlock[7,4,2,2]
+                    *              0             0             1 
+  1491 assignedBlock[7,5,2,2]
+                    *              0             0             1 
+  1492 assignedBlock[7,6,2,2]
+                    *              0             0             1 
+  1493 assignedBlock[7,7,2,2]
+                    *              0             0             1 
+  1494 assignedBlock[7,8,2,2]
+                    *              0             0             1 
+  1495 assignedBlock[7,9,2,2]
+                    *              0             0             1 
+  1496 assignedBlock[7,10,2,2]
+                    *              0             0             1 
+  1497 assignedBlock[7,11,2,2]
+                    *              0             0             1 
+  1498 assignedBlock[7,1,2,3]
+                    *              0             0             1 
+  1499 assignedBlock[7,2,2,3]
+                    *              0             0             1 
+  1500 assignedBlock[7,3,2,3]
+                    *              0             0             1 
+  1501 assignedBlock[7,4,2,3]
+                    *              0             0             1 
+  1502 assignedBlock[7,5,2,3]
+                    *              0             0             1 
+  1503 assignedBlock[7,6,2,3]
+                    *              0             0             1 
+  1504 assignedBlock[7,7,2,3]
+                    *              0             0             1 
+  1505 assignedBlock[7,8,2,3]
+                    *              0             0             1 
+  1506 assignedBlock[7,9,2,3]
+                    *              0             0             1 
+  1507 assignedBlock[7,10,2,3]
+                    *              0             0             1 
+  1508 assignedBlock[7,11,2,3]
+                    *              0             0             1 
+  1509 assignedBlock[7,1,2,4]
+                    *              0             0             1 
+  1510 assignedBlock[7,2,2,4]
+                    *              0             0             1 
+  1511 assignedBlock[7,3,2,4]
+                    *              0             0             1 
+  1512 assignedBlock[7,4,2,4]
+                    *              0             0             1 
+  1513 assignedBlock[7,5,2,4]
+                    *              0             0             1 
+  1514 assignedBlock[7,6,2,4]
+                    *              0             0             1 
+  1515 assignedBlock[7,7,2,4]
+                    *              0             0             1 
+  1516 assignedBlock[7,8,2,4]
+                    *              0             0             1 
+  1517 assignedBlock[7,9,2,4]
+                    *              0             0             1 
+  1518 assignedBlock[7,10,2,4]
+                    *              0             0             1 
+  1519 assignedBlock[7,11,2,4]
+                    *              0             0             1 
+  1520 assignedBlock[7,1,2,5]
+                    *              0             0             1 
+  1521 assignedBlock[7,2,2,5]
+                    *              0             0             1 
+  1522 assignedBlock[7,3,2,5]
+                    *              0             0             1 
+  1523 assignedBlock[7,4,2,5]
+                    *              0             0             1 
+  1524 assignedBlock[7,5,2,5]
+                    *              0             0             1 
+  1525 assignedBlock[7,6,2,5]
+                    *              0             0             1 
+  1526 assignedBlock[7,7,2,5]
+                    *              0             0             1 
+  1527 assignedBlock[7,8,2,5]
+                    *              0             0             1 
+  1528 assignedBlock[7,9,2,5]
+                    *              0             0             1 
+  1529 assignedBlock[7,10,2,5]
+                    *              0             0             1 
+  1530 assignedBlock[7,11,2,5]
+                    *              0             0             1 
 
 Integer feasibility conditions:
 
