@@ -58,8 +58,8 @@ class Engine:
   def Solve(self,pr):
     print "Solving problem..."
     #capture = subprocess.check_output(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--write", "Output/write.out"])
-    subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","180", "--write", "Output/write.out"])
-    #subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","180", "--output", "Output/output.out"])
+    #subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--write", "Output/write.out"])
+    subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--output", "Output/output.out"])
     return pr.solution()
     
 
