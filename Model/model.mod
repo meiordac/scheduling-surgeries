@@ -4,7 +4,7 @@
 set days;
 set weeks;
 set blocks; #bloques quirurgicos, deberian ir asociados a un determinado pabellon quirurgico
-set surgeons;
+#set surgeons;
 set operatingRooms; #pabellones quirurgicos
 #set blocks_by_operatingRoom{blocks} within operatingRooms;
 set patientTypes; #tipos de pacientes, ver .dat para mas detalles
@@ -18,16 +18,17 @@ set patients;
 param numPatients{pt in patientTypes} >=0; #numero de pacientes del tipo p, cantidad de casos de ese tipo
 param ORAvailable{d in days} >=0; #salas de operaciones del tip op disponibles en dia d
 param blockDuration{b in blocks}; #duracion del bloque b
-param totalBlocks{b in blocks, d in days} >=0 ; #numero total de bloques quirurgicos del tipo b en dia d
+param totalBlocks{b in blocks, d in days} >=0; #numero total de bloques quirurgicos del tipo b en dia d
 param alpha{pt in patientTypes}; #nivel de prioridad del paciente tipo p, es un ponderador usado en funcion objetivo
 param ges{p in patients} binary; #pacientes están en el ges o no
 param beta; #constante que le da el peso a que un paciente sea ges o no
 param waitingPeriod{p in patients};#tiempo de espera hasta el momento de un paciente determinado
 param surgeryLength{p in patients};#tiempo de duracion de la cirugia para el paciente p
-#param beds{d in days, w in weeks} >= 0; #cantidad de camas disponibles en un dia d y en una semana w
-#param anesthetists{w in weeks}>=0; #cantidad de anestecistas disponibles para una semana w
-#param weekBlocks{b in blocks, w in weeks} >=0; #cantidad de bloques del tipo b en la semana w
-#param ORAvailableSurgeon{d in days, w in weeks, s un surgeons}; #salas de operaciones disponibles en dia d, semana w y para el cirujano s
+#param anesthesiaType{p in patients};#anestecia local (0) o general (1)
+#param availableSurgeons{d in days, pt in patientTypes, b in blocks};
+#param beds{d in days} >= 0; #cantidad de camas disponibles en un dia d y en una semana w
+#param anesthetists{d in days, b in blocks} >= 0; #cantidad de anestecistas disponibles para un dia d en el tipo de bloque b
+#param weekBlocks{b in blocks, w in weeks} >= 0; #cantidad de bloques del tipo b en la semana w
 
 # ---------------------
 # VARIABLES
@@ -63,9 +64,11 @@ subject to rest_max_num_patients_per_block {b in blocks, d in days}:
 subject to rest_max_or{d in days}:
   sum{pt in patientTypes, op in operatingRooms,b in blocks} assignedBlock[pt,op,b,d]<=ORAvailable[d];
   
-# La cantidad de bloques debe estar restringida a la cantidad de salas de operacion disponibles para un dia dado
+#subject to rest_beds{d in days}:
+#sum{p in patients, b in blocks} assignedPatient[p,b,d] <= beds[d];
 
-#subject to rest_blocks_by_operatingRoom {d in days, b in blocks, op in operatingRooms}:
-#sum{pt in patientTypes} assignedBlock[pt,b,d] <= assignedOR[op,d];
-  
-  
+#subject to rest_surgeons{d in days, p in patients}:
+#sum{b in blocks} assignedPatient[p,b,d] <= availableSurgeons[d,pt,b];
+
+#subject to rest_anesthesists{d in days, b in blocks}:
+#sum{p in patients} assignedPatient[p,b,d]*anesthesiaType[p] <= anesthetists[d,b];
