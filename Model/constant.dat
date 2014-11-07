@@ -54,4 +54,9 @@ param ORAvailable:=
 param totalBlocks:
   1 2 3 4 5:=
 1 6 7 8 7 6   
-2 3 2 3 2 3;   
+2 3 2 3 2 3;  
+
+param anesthetists:
+  1 2 3 4 5:=
+1 2 2 1 3 2   
+2 6 9 5 9 6;  

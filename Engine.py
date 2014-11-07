@@ -29,6 +29,10 @@ class Engine:
     for r in rows:
       f.write(str(int(r['Patient']))+' '+str(r['SurgeryLength'])+'\n')
     f.write(';')
+    f.write('\nparam anesthesiaType := ')
+    for r in rows:
+      f.write(str(int(r['Patient']))+' '+str(r['anesthesiaType'])+'\n')
+    f.write(';')
     f.close()
     
   def CreateInputFile(self):    
@@ -59,7 +63,7 @@ class Engine:
     print "Solving problem..."
     #capture = subprocess.check_output(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--write", "Output/write.out"])
     #subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--write", "Output/write.out"])
-    subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--output", "Output/output.out"])
+    subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--output", "Output/output.out", "--write", "Output/write.out"])
     return pr.solution()
     
 
