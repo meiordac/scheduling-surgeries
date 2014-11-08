@@ -39,7 +39,7 @@ var assignedBlock{pt in patientTypes,op in operatingRooms, b in blocks, d in day
 #var assignedOR{op in operatingRooms, d in days} binary; #define si una sala de operaciones de asina en un dia determinado por un paciente p
 
 # ---------------------
-# OBJETCTIVE FUNCTION
+# OBJECTIVE FUNCTION
 # ---------------------
 
 # Se maximiza la asignacion de bloques ponderada por la prioridad del tipo de paciente p
