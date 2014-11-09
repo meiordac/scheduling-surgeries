@@ -12,7 +12,7 @@ class Engine:
   def LoadPatients(self,rows):
     #se carga la lista de pacientes que seran procesados
     f = open('Model/variable.dat', 'w+')
-    f.write('\nset patients := ')
+    f.write('\n \nset patients := ')
     for r in rows:
       f.write(str(int(r['Patient']))+' ')
     f.write(';\n')
@@ -21,17 +21,21 @@ class Engine:
       waitingPeriod=datetime.datetime.now() -datetime.datetime.strptime((r['Date']), "%Y-%m-%d") 
       f.write(str(int(r['Patient']))+' '+str(waitingPeriod.days) +'\n')
     f.write(';\n')
-    f.write('\nparam ges := ')
+    f.write('\n param ges := ')
     for r in rows:
       f.write(str(int(r['Patient']))+' '+str(int(r['GES']))+'\n')
     f.write(';\n')
-    f.write('\nparam surgeryLength := ')
+    f.write('\n param surgeryLength := ')
     for r in rows:
       f.write(str(int(r['Patient']))+' '+str(r['SurgeryLength'])+'\n')
     f.write(';')
-    f.write('\nparam anesthesiaType := ')
+    f.write('\n param anesthesiaType := ')
     for r in rows:
       f.write(str(int(r['Patient']))+' '+str(r['anesthesiaType'])+'\n')
+    f.write(';')
+    f.write('\n param patientTypeByPatient := ')
+    for r in rows:
+      f.write(str(int(r['Patient']))+' '+str(r['PatientType'])+'\n')
     f.write(';')
     f.close()
     
@@ -62,8 +66,8 @@ class Engine:
   def Solve(self,pr):
     print "Solving problem..."
     #capture = subprocess.check_output(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--write", "Output/write.out"])
-    #subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--write", "Output/write.out"])
-    subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--output", "Output/output.out", "--write", "Output/write.out"])
+    #subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--output", "Output/output.out", "--write", "Output/write.out"])
+    subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--output", "Output/output.out", "--write", "Output/write.out"])
     return pr.solution()
     
 
