@@ -30,22 +30,19 @@ class ReadExcel:
         for line in f:
            lines.append(line.rstrip('\n'))
     #me muevo en el archivo por la cantidad de restricciones que existan
-    i = len(pr.patients) + 3*(len(pr.days))*(len(pr.blocks)) + len(pr.days)+len(pr.days)*len(pr.operatingRooms)+len(pr.days)*len(pr.blocks)*len(pr.patients) + 3  
+    i = len(pr.patients) + 3*(len(pr.days))*(len(pr.blocks)) + 2*len(pr.days)+len(pr.days)*len(pr.operatingRooms) + 3  
     print i
     #primera linea son cantidad de variables, iteraciones y luego valor de FO
     with open('Output/Patients.csv', 'wb') as csvfile:
       progWriter = csv.writer(csvfile, dialect="excel")
       progWriter.writerow(['id','nombre','edad','rut','tipo paciente','duracion de cirugia','dia','bloque'])
-      for pt in range(1,len(pr.patientTypes)+1):
-	for b in range(1,len(pr.blocks)+1):
-	  for d in range(1,len(pr.days)+1):
-	    for p in range(1,len(pr.patients)+1):    
-		#print p,rows[p-1]["Name"].encode('utf8'),rows[p-1]["Age"],rows[p-1]["Rut"],rows[p-1]["PatientType"],rows[p-1]["SurgeryLength"],d,b
-		#print p, pt, b, d
-		if int(lines[i]) == 1:
-		  name=rows[p-1]["Name"].encode('utf8')
-		  progWriter.writerow([ p,name,rows[p-1]["Age"],rows[p-1]["Rut"],rows[p-1]["PatientType"],rows[p-1]["SurgeryLength"],d,b])
-		i = i + 1
+      for b in range(1,len(pr.blocks)+1):
+	for d in range(1,len(pr.days)+1):
+	  for p in range(1,len(pr.patients)+1):    
+	    if int(lines[i]) == 1:
+	      name=rows[p-1]["Name"].encode('utf8')
+	      progWriter.writerow([ p,name,rows[p-1]["Age"],rows[p-1]["Rut"],rows[p-1]["PatientType"],rows[p-1]["SurgeryLength"],d,b])
+	    i = i + 1
       print i
       with open('Output/Schedule.csv', 'wb') as csvfile:
 	progWriter = csv.writer(csvfile,dialect="excel")
