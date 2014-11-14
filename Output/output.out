@@ -1,14 +1,14 @@
 Problem:    model
-Rows:       422
+Rows:       482
 Columns:    4030 (4030 integer, 4030 binary)
-Non-zeros:  17670
-Status:     INTEGER OPTIMAL
-Objective:  objectiveFunction = 6684750 (MAXimum)
+Non-zeros:  20940
+Status:     INTEGER NON-OPTIMAL
+Objective:  objectiveFunction = 6687211 (MAXimum)
 
    No.   Row name        Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
      1 objectiveFunction
-                         6.68475e+06                             
+                         6.68721e+06                             
      2 rest_no_duplicate_patients[1]
                                    1                           1 
      3 rest_no_duplicate_patients[2]
@@ -26,7 +26,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
      9 rest_no_duplicate_patients[8]
                                    1                           1 
     10 rest_no_duplicate_patients[9]
-                                   0                           1 
+                                   1                           1 
     11 rest_no_duplicate_patients[10]
                                    0                           1 
     12 rest_no_duplicate_patients[11]
@@ -164,11 +164,11 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
     78 rest_no_duplicate_patients[77]
                                    0                           1 
     79 rest_no_duplicate_patients[78]
-                                   1                           1 
+                                   0                           1 
     80 rest_no_duplicate_patients[79]
                                    0                           1 
     81 rest_no_duplicate_patients[80]
-                                   0                           1 
+                                   1                           1 
     82 rest_no_duplicate_patients[81]
                                    0                           1 
     83 rest_no_duplicate_patients[82]
@@ -256,7 +256,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    124 rest_no_duplicate_patients[123]
                                    0                           1 
    125 rest_no_duplicate_patients[124]
-                                   1                           1 
+                                   0                           1 
    126 rest_no_duplicate_patients[125]
                                    0                           1 
    127 rest_no_duplicate_patients[126]
@@ -372,7 +372,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    182 rest_no_duplicate_patients[181]
                                    0                           1 
    183 rest_no_duplicate_patients[182]
-                                   1                           1 
+                                   0                           1 
    184 rest_no_duplicate_patients[183]
                                    0                           1 
    185 rest_no_duplicate_patients[184]
@@ -516,7 +516,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    254 rest_no_duplicate_patients[253]
                                    1                           1 
    255 rest_no_duplicate_patients[254]
-                                   1                           1 
+                                   0                           1 
    256 rest_no_duplicate_patients[255]
                                    0                           1 
    257 rest_no_duplicate_patients[256]
@@ -678,7 +678,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    335 rest_assign_block_type_surgery_operating_room[2,3]
                                    1                           1 
    336 rest_assign_block_type_surgery_operating_room[2,4]
-                                   1                           1 
+                                   0                           1 
    337 rest_assign_block_type_surgery_operating_room[2,5]
                                    1                           1 
    338 rest_assign_block_type_surgery_operating_room[3,1]
@@ -742,15 +742,15 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    367 rest_assign_block_type_surgery_operating_room[8,5]
                                    1                           1 
    368 rest_assign_block_type_surgery_operating_room[9,1]
-                                   0                           1 
+                                   1                           1 
    369 rest_assign_block_type_surgery_operating_room[9,2]
-                                   0                           1 
+                                   1                           1 
    370 rest_assign_block_type_surgery_operating_room[9,3]
                                    1                           1 
    371 rest_assign_block_type_surgery_operating_room[9,4]
-                                   0                           1 
+                                   1                           1 
    372 rest_assign_block_type_surgery_operating_room[9,5]
-                                   0                           1 
+                                   1                           1 
    373 rest_assign_block_type_surgery_operating_room[10,1]
                                    1                           1 
    374 rest_assign_block_type_surgery_operating_room[10,2]
@@ -762,15 +762,15 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    377 rest_assign_block_type_surgery_operating_room[10,5]
                                    1                           1 
    378 rest_assign_block_type_surgery_operating_room[11,1]
-                                   0                           1 
+                                   1                           1 
    379 rest_assign_block_type_surgery_operating_room[11,2]
-                                   0                           1 
+                                   1                           1 
    380 rest_assign_block_type_surgery_operating_room[11,3]
                                    1                           1 
    381 rest_assign_block_type_surgery_operating_room[11,4]
-                                   0                           1 
+                                   1                           1 
    382 rest_assign_block_type_surgery_operating_room[11,5]
-                                   0                           1 
+                                   1                           1 
    383 rest_max_num_patients_per_block[1,1]
                                    6                           6 
    384 rest_max_num_patients_per_block[1,2]
@@ -792,60 +792,180 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    392 rest_max_num_patients_per_block[2,5]
                                   11                          11 
    393 rest_max_or[1]
-                                   9                          11 
+                                  11                          11 
    394 rest_max_or[2]
-                                   9                          11 
+                                  11                          11 
    395 rest_max_or[3]
                                   11                          11 
    396 rest_max_or[4]
-                                   9                          10 
+                                  10                          10 
    397 rest_max_or[5]
-                                   9                          11 
+                                  11                          11 
    398 rest_anesthesists[1,1]
                                    1                           2 
    399 rest_anesthesists[1,2]
-                                   2                           6 
+                                   4                           6 
    400 rest_anesthesists[2,1]
-                                   2                           2 
+                                   1                           2 
    401 rest_anesthesists[2,2]
-                                   4                           9 
+                                   5                           9 
    402 rest_anesthesists[3,1]
                                    0                           1 
    403 rest_anesthesists[3,2]
-                                   3                           5 
+                                   4                           5 
    404 rest_anesthesists[4,1]
                                    2                           3 
    405 rest_anesthesists[4,2]
-                                   3                           9 
+                                   5                           9 
    406 rest_anesthesists[5,1]
-                                   2                           2 
+                                   0                           2 
    407 rest_anesthesists[5,2]
-                                   6                           6 
-   408 rest_max_blocks[1,1]
-                                   6                           6 
-   409 rest_max_blocks[1,2]
-                                   7                           7 
-   410 rest_max_blocks[1,3]
-                                   8                           8 
-   411 rest_max_blocks[1,4]
-                                   7                           7 
-   412 rest_max_blocks[1,5]
-                                   6                           6 
-   413 rest_max_blocks[2,1]
-                                   3                           3 
-   414 rest_max_blocks[2,2]
-                                   2                           2 
-   415 rest_max_blocks[2,3]
-                                   3                           3 
-   416 rest_max_blocks[2,4]
-                                   2                           2 
-   417 rest_max_blocks[2,5]
-                                   3                           3 
-   418 rest_beds[1]                8                          20 
-   419 rest_beds[2]                8                          27 
-   420 rest_beds[3]               13                          18 
-   421 rest_beds[4]                9                          25 
-   422 rest_beds[5]               13                          15 
+                                   2                           6 
+   408 rest_beds[1]                9                          20 
+   409 rest_beds[2]                9                          27 
+   410 rest_beds[3]               10                          18 
+   411 rest_beds[4]               10                          25 
+   412 rest_beds[5]               11                          15 
+   413 rest_patient_room[1,1,1]
+                                  -3                          -0 
+   414 rest_patient_room[1,1,2]
+                                  -6                          -0 
+   415 rest_patient_room[1,1,3]
+                             -7.9975                          -0 
+   416 rest_patient_room[1,1,4]
+                                  -5                          -0 
+   417 rest_patient_room[1,1,5]
+                                  -3                          -0 
+   418 rest_patient_room[1,2,1]
+                                  -3                          -0 
+   419 rest_patient_room[1,2,2]
+                                   0                          -0 
+   420 rest_patient_room[1,2,3]
+                                   0                          -0 
+   421 rest_patient_room[1,2,4]
+                              -3.985                          -0 
+   422 rest_patient_room[1,2,5]
+                                  -3                          -0 
+   423 rest_patient_room[2,1,1]
+                             -0.9975                          -0 
+   424 rest_patient_room[2,1,2]
+                                   0                          -0 
+   425 rest_patient_room[2,1,3]
+                                   0                          -0 
+   426 rest_patient_room[2,1,4]
+                               -0.99                          -0 
+   427 rest_patient_room[2,1,5]
+                                   0                          -0 
+   428 rest_patient_room[2,2,1]
+                                   0                          -0 
+   429 rest_patient_room[2,2,2]
+                             -0.9975                          -0 
+   430 rest_patient_room[2,2,3]
+                                   0                          -0 
+   431 rest_patient_room[2,2,4]
+                                   0                          -0 
+   432 rest_patient_room[2,2,5]
+                              -0.995                          -0 
+   433 rest_patient_room[3,1,1]
+                                   0                          -0 
+   434 rest_patient_room[3,1,2]
+                                   0                          -0 
+   435 rest_patient_room[3,1,3]
+                              -0.995                          -0 
+   436 rest_patient_room[3,1,4]
+                                   0                          -0 
+   437 rest_patient_room[3,1,5]
+                                   0                          -0 
+   438 rest_patient_room[3,2,1]
+                             -0.9925                          -0 
+   439 rest_patient_room[3,2,2]
+                             -0.9975                          -0 
+   440 rest_patient_room[3,2,3]
+                                   0                          -0 
+   441 rest_patient_room[3,2,4]
+                                   0                          -0 
+   442 rest_patient_room[3,2,5]
+                                   0                          -0 
+   443 rest_patient_room[4,1,1]
+                                   0                          -0 
+   444 rest_patient_room[4,1,2]
+                                   0                          -0 
+   445 rest_patient_room[4,1,3]
+                                   0                          -0 
+   446 rest_patient_room[4,1,4]
+                                   0                          -0 
+   447 rest_patient_room[4,1,5]
+                                   0                          -0 
+   448 rest_patient_room[4,2,1]
+                             -0.9975                          -0 
+   449 rest_patient_room[4,2,2]
+                                   0                          -0 
+   450 rest_patient_room[4,2,3]
+                               -0.99                          -0 
+   451 rest_patient_room[4,2,4]
+                                   0                          -0 
+   452 rest_patient_room[4,2,5]
+                                   0                          -0 
+   453 rest_patient_room[5,1,1]
+                                   0                          -0 
+   454 rest_patient_room[5,1,2]
+                                   0                          -0 
+   455 rest_patient_room[5,1,3]
+                                   0                          -0 
+   456 rest_patient_room[5,1,4]
+                                   0                          -0 
+   457 rest_patient_room[5,1,5]
+                             -0.9975                          -0 
+   458 rest_patient_room[5,2,1]
+                             -0.9975                          -0 
+   459 rest_patient_room[5,2,2]
+                              -0.995                          -0 
+   460 rest_patient_room[5,2,3]
+                             -0.9925                          -0 
+   461 rest_patient_room[5,2,4]
+                                   0                          -0 
+   462 rest_patient_room[5,2,5]
+                              -0.995                          -0 
+   463 rest_patient_room[6,1,1]
+                                   0                          -0 
+   464 rest_patient_room[6,1,2]
+                             -0.9925                          -0 
+   465 rest_patient_room[6,1,3]
+                                   0                          -0 
+   466 rest_patient_room[6,1,4]
+                                   0                          -0 
+   467 rest_patient_room[6,1,5]
+                              -0.995                          -0 
+   468 rest_patient_room[6,2,1]
+                                   0                          -0 
+   469 rest_patient_room[6,2,2]
+                                   0                          -0 
+   470 rest_patient_room[6,2,3]
+                                   0                          -0 
+   471 rest_patient_room[6,2,4]
+                                   0                          -0 
+   472 rest_patient_room[6,2,5]
+                                   0                          -0 
+   473 rest_patient_room[7,1,1]
+                             -0.9925                          -0 
+   474 rest_patient_room[7,1,2]
+                                   0                          -0 
+   475 rest_patient_room[7,1,3]
+                                   0                          -0 
+   476 rest_patient_room[7,1,4]
+                                   0                          -0 
+   477 rest_patient_room[7,1,5]
+                                   0                          -0 
+   478 rest_patient_room[7,2,1]
+                                   0                          -0 
+   479 rest_patient_room[7,2,2]
+                              -0.995                          -0 
+   480 rest_patient_room[7,2,3]
+                                   0                          -0 
+   481 rest_patient_room[7,2,4]
+                                   0                          -0 
+   482 rest_patient_room[7,2,5]
+                               -0.99                          -0 
 
    No. Column name       Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
@@ -858,7 +978,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
      4 assignedPatient[4,1,1]
                     *              0             0             1 
      5 assignedPatient[5,1,1]
-                    *              0             0             1 
+                    *              1             0             1 
      6 assignedPatient[6,1,1]
                     *              0             0             1 
      7 assignedPatient[7,1,1]
@@ -878,7 +998,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
     14 assignedPatient[14,1,1]
                     *              0             0             1 
     15 assignedPatient[15,1,1]
-                    *              1             0             1 
+                    *              0             0             1 
     16 assignedPatient[16,1,1]
                     *              0             0             1 
     17 assignedPatient[17,1,1]
@@ -918,7 +1038,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
     34 assignedPatient[34,1,1]
                     *              0             0             1 
     35 assignedPatient[35,1,1]
-                    *              0             0             1 
+                    *              1             0             1 
     36 assignedPatient[36,1,1]
                     *              0             0             1 
     37 assignedPatient[37,1,1]
@@ -954,7 +1074,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
     52 assignedPatient[52,1,1]
                     *              0             0             1 
     53 assignedPatient[53,1,1]
-                    *              1             0             1 
+                    *              0             0             1 
     54 assignedPatient[54,1,1]
                     *              0             0             1 
     55 assignedPatient[55,1,1]
@@ -964,7 +1084,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
     57 assignedPatient[57,1,1]
                     *              0             0             1 
     58 assignedPatient[58,1,1]
-                    *              0             0             1 
+                    *              1             0             1 
     59 assignedPatient[59,1,1]
                     *              0             0             1 
     60 assignedPatient[60,1,1]
@@ -1504,7 +1624,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    327 assignedPatient[1,1,2]
                     *              0             0             1 
    328 assignedPatient[2,1,2]
-                    *              0             0             1 
+                    *              1             0             1 
    329 assignedPatient[3,1,2]
                     *              0             0             1 
    330 assignedPatient[4,1,2]
@@ -1512,7 +1632,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    331 assignedPatient[5,1,2]
                     *              0             0             1 
    332 assignedPatient[6,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
    333 assignedPatient[7,1,2]
                     *              0             0             1 
    334 assignedPatient[8,1,2]
@@ -1528,11 +1648,11 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    339 assignedPatient[13,1,2]
                     *              0             0             1 
    340 assignedPatient[14,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
    341 assignedPatient[15,1,2]
                     *              0             0             1 
    342 assignedPatient[16,1,2]
-                    *              0             0             1 
+                    *              1             0             1 
    343 assignedPatient[17,1,2]
                     *              0             0             1 
    344 assignedPatient[18,1,2]
@@ -1604,13 +1724,13 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    377 assignedPatient[51,1,2]
                     *              0             0             1 
    378 assignedPatient[52,1,2]
-                    *              0             0             1 
+                    *              1             0             1 
    379 assignedPatient[53,1,2]
                     *              0             0             1 
    380 assignedPatient[54,1,2]
                     *              0             0             1 
    381 assignedPatient[55,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
    382 assignedPatient[56,1,2]
                     *              0             0             1 
    383 assignedPatient[57,1,2]
@@ -2160,7 +2280,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    655 assignedPatient[3,1,3]
                     *              0             0             1 
    656 assignedPatient[4,1,3]
-                    *              0             0             1 
+                    *              1             0             1 
    657 assignedPatient[5,1,3]
                     *              0             0             1 
    658 assignedPatient[6,1,3]
@@ -2184,7 +2304,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    667 assignedPatient[15,1,3]
                     *              0             0             1 
    668 assignedPatient[16,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    669 assignedPatient[17,1,3]
                     *              0             0             1 
    670 assignedPatient[18,1,3]
@@ -2214,7 +2334,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    682 assignedPatient[30,1,3]
                     *              0             0             1 
    683 assignedPatient[31,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    684 assignedPatient[32,1,3]
                     *              0             0             1 
    685 assignedPatient[33,1,3]
@@ -2224,7 +2344,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    687 assignedPatient[35,1,3]
                     *              0             0             1 
    688 assignedPatient[36,1,3]
-                    *              0             0             1 
+                    *              1             0             1 
    689 assignedPatient[37,1,3]
                     *              0             0             1 
    690 assignedPatient[38,1,3]
@@ -2260,7 +2380,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    705 assignedPatient[53,1,3]
                     *              0             0             1 
    706 assignedPatient[54,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
    707 assignedPatient[55,1,3]
                     *              0             0             1 
    708 assignedPatient[56,1,3]
@@ -2274,7 +2394,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    712 assignedPatient[60,1,3]
                     *              0             0             1 
    713 assignedPatient[61,1,3]
-                    *              0             0             1 
+                    *              1             0             1 
    714 assignedPatient[62,1,3]
                     *              0             0             1 
    715 assignedPatient[63,1,3]
@@ -2808,15 +2928,15 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
    979 assignedPatient[1,1,4]
                     *              0             0             1 
    980 assignedPatient[2,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
    981 assignedPatient[3,1,4]
                     *              0             0             1 
    982 assignedPatient[4,1,4]
                     *              0             0             1 
    983 assignedPatient[5,1,4]
-                    *              1             0             1 
-   984 assignedPatient[6,1,4]
                     *              0             0             1 
+   984 assignedPatient[6,1,4]
+                    *              1             0             1 
    985 assignedPatient[7,1,4]
                     *              0             0             1 
    986 assignedPatient[8,1,4]
@@ -2858,7 +2978,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1004 assignedPatient[26,1,4]
                     *              0             0             1 
   1005 assignedPatient[27,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
   1006 assignedPatient[28,1,4]
                     *              0             0             1 
   1007 assignedPatient[29,1,4]
@@ -2866,7 +2986,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1008 assignedPatient[30,1,4]
                     *              0             0             1 
   1009 assignedPatient[31,1,4]
-                    *              0             0             1 
+                    *              1             0             1 
   1010 assignedPatient[32,1,4]
                     *              0             0             1 
   1011 assignedPatient[33,1,4]
@@ -2924,7 +3044,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1037 assignedPatient[59,1,4]
                     *              0             0             1 
   1038 assignedPatient[60,1,4]
-                    *              0             0             1 
+                    *              1             0             1 
   1039 assignedPatient[61,1,4]
                     *              0             0             1 
   1040 assignedPatient[62,1,4]
@@ -3164,7 +3284,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1157 assignedPatient[179,1,4]
                     *              0             0             1 
   1158 assignedPatient[180,1,4]
-                    *              0             0             1 
+                    *              1             0             1 
   1159 assignedPatient[181,1,4]
                     *              0             0             1 
   1160 assignedPatient[182,1,4]
@@ -3470,7 +3590,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1310 assignedPatient[6,1,5]
                     *              0             0             1 
   1311 assignedPatient[7,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
   1312 assignedPatient[8,1,5]
                     *              0             0             1 
   1313 assignedPatient[9,1,5]
@@ -3478,7 +3598,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1314 assignedPatient[10,1,5]
                     *              0             0             1 
   1315 assignedPatient[11,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
   1316 assignedPatient[12,1,5]
                     *              0             0             1 
   1317 assignedPatient[13,1,5]
@@ -3522,7 +3642,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1336 assignedPatient[32,1,5]
                     *              0             0             1 
   1337 assignedPatient[33,1,5]
-                    *              0             0             1 
+                    *              1             0             1 
   1338 assignedPatient[34,1,5]
                     *              0             0             1 
   1339 assignedPatient[35,1,5]
@@ -3564,11 +3684,11 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1357 assignedPatient[53,1,5]
                     *              0             0             1 
   1358 assignedPatient[54,1,5]
-                    *              0             0             1 
-  1359 assignedPatient[55,1,5]
-                    *              0             0             1 
-  1360 assignedPatient[56,1,5]
                     *              1             0             1 
+  1359 assignedPatient[55,1,5]
+                    *              1             0             1 
+  1360 assignedPatient[56,1,5]
+                    *              0             0             1 
   1361 assignedPatient[57,1,5]
                     *              0             0             1 
   1362 assignedPatient[58,1,5]
@@ -4110,7 +4230,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1630 assignedPatient[326,1,5]
                     *              0             0             1 
   1631 assignedPatient[1,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
   1632 assignedPatient[2,2,1]
                     *              0             0             1 
   1633 assignedPatient[3,2,1]
@@ -4122,7 +4242,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1636 assignedPatient[6,2,1]
                     *              0             0             1 
   1637 assignedPatient[7,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
   1638 assignedPatient[8,2,1]
                     *              0             0             1 
   1639 assignedPatient[9,2,1]
@@ -4136,7 +4256,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1643 assignedPatient[13,2,1]
                     *              0             0             1 
   1644 assignedPatient[14,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
   1645 assignedPatient[15,2,1]
                     *              0             0             1 
   1646 assignedPatient[16,2,1]
@@ -4164,17 +4284,17 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1657 assignedPatient[27,2,1]
                     *              0             0             1 
   1658 assignedPatient[28,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
   1659 assignedPatient[29,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
   1660 assignedPatient[30,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
   1661 assignedPatient[31,2,1]
                     *              0             0             1 
   1662 assignedPatient[32,2,1]
                     *              0             0             1 
   1663 assignedPatient[33,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
   1664 assignedPatient[34,2,1]
                     *              0             0             1 
   1665 assignedPatient[35,2,1]
@@ -4212,7 +4332,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1681 assignedPatient[51,2,1]
                     *              0             0             1 
   1682 assignedPatient[52,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
   1683 assignedPatient[53,2,1]
                     *              0             0             1 
   1684 assignedPatient[54,2,1]
@@ -4226,7 +4346,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1688 assignedPatient[58,2,1]
                     *              0             0             1 
   1689 assignedPatient[59,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
   1690 assignedPatient[60,2,1]
                     *              0             0             1 
   1691 assignedPatient[61,2,1]
@@ -4234,7 +4354,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1692 assignedPatient[62,2,1]
                     *              0             0             1 
   1693 assignedPatient[63,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
   1694 assignedPatient[64,2,1]
                     *              0             0             1 
   1695 assignedPatient[65,2,1]
@@ -4766,7 +4886,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1958 assignedPatient[2,2,2]
                     *              0             0             1 
   1959 assignedPatient[3,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
   1960 assignedPatient[4,2,2]
                     *              0             0             1 
   1961 assignedPatient[5,2,2]
@@ -4784,7 +4904,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1967 assignedPatient[11,2,2]
                     *              0             0             1 
   1968 assignedPatient[12,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
   1969 assignedPatient[13,2,2]
                     *              1             0             1 
   1970 assignedPatient[14,2,2]
@@ -4798,7 +4918,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1974 assignedPatient[18,2,2]
                     *              0             0             1 
   1975 assignedPatient[19,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
   1976 assignedPatient[20,2,2]
                     *              0             0             1 
   1977 assignedPatient[21,2,2]
@@ -4814,7 +4934,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1982 assignedPatient[26,2,2]
                     *              0             0             1 
   1983 assignedPatient[27,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
   1984 assignedPatient[28,2,2]
                     *              0             0             1 
   1985 assignedPatient[29,2,2]
@@ -4824,7 +4944,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   1987 assignedPatient[31,2,2]
                     *              0             0             1 
   1988 assignedPatient[32,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
   1989 assignedPatient[33,2,2]
                     *              0             0             1 
   1990 assignedPatient[34,2,2]
@@ -4866,7 +4986,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2008 assignedPatient[52,2,2]
                     *              0             0             1 
   2009 assignedPatient[53,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
   2010 assignedPatient[54,2,2]
                     *              0             0             1 
   2011 assignedPatient[55,2,2]
@@ -4874,11 +4994,11 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2012 assignedPatient[56,2,2]
                     *              0             0             1 
   2013 assignedPatient[57,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
   2014 assignedPatient[58,2,2]
                     *              0             0             1 
   2015 assignedPatient[59,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
   2016 assignedPatient[60,2,2]
                     *              0             0             1 
   2017 assignedPatient[61,2,2]
@@ -4890,7 +5010,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2020 assignedPatient[64,2,2]
                     *              0             0             1 
   2021 assignedPatient[65,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
   2022 assignedPatient[66,2,2]
                     *              0             0             1 
   2023 assignedPatient[67,2,2]
@@ -5434,9 +5554,9 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2292 assignedPatient[10,2,3]
                     *              0             0             1 
   2293 assignedPatient[11,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
   2294 assignedPatient[12,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
   2295 assignedPatient[13,2,3]
                     *              0             0             1 
   2296 assignedPatient[14,2,3]
@@ -5454,7 +5574,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2302 assignedPatient[20,2,3]
                     *              0             0             1 
   2303 assignedPatient[21,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
   2304 assignedPatient[22,2,3]
                     *              0             0             1 
   2305 assignedPatient[23,2,3]
@@ -5476,15 +5596,15 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2313 assignedPatient[31,2,3]
                     *              0             0             1 
   2314 assignedPatient[32,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   2315 assignedPatient[33,2,3]
                     *              0             0             1 
   2316 assignedPatient[34,2,3]
                     *              0             0             1 
   2317 assignedPatient[35,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   2318 assignedPatient[36,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   2319 assignedPatient[37,2,3]
                     *              0             0             1 
   2320 assignedPatient[38,2,3]
@@ -5524,7 +5644,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2337 assignedPatient[55,2,3]
                     *              0             0             1 
   2338 assignedPatient[56,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
   2339 assignedPatient[57,2,3]
                     *              0             0             1 
   2340 assignedPatient[58,2,3]
@@ -5538,13 +5658,13 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2344 assignedPatient[62,2,3]
                     *              0             0             1 
   2345 assignedPatient[63,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
   2346 assignedPatient[64,2,3]
                     *              0             0             1 
   2347 assignedPatient[65,2,3]
                     *              0             0             1 
   2348 assignedPatient[66,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
   2349 assignedPatient[67,2,3]
                     *              0             0             1 
   2350 assignedPatient[68,2,3]
@@ -5660,7 +5780,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2405 assignedPatient[123,2,3]
                     *              0             0             1 
   2406 assignedPatient[124,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   2407 assignedPatient[125,2,3]
                     *              0             0             1 
   2408 assignedPatient[126,2,3]
@@ -5818,11 +5938,11 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2484 assignedPatient[202,2,3]
                     *              0             0             1 
   2485 assignedPatient[203,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   2486 assignedPatient[204,2,3]
                     *              0             0             1 
   2487 assignedPatient[205,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   2488 assignedPatient[206,2,3]
                     *              0             0             1 
   2489 assignedPatient[207,2,3]
@@ -5918,9 +6038,9 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2534 assignedPatient[252,2,3]
                     *              0             0             1 
   2535 assignedPatient[253,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   2536 assignedPatient[254,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   2537 assignedPatient[255,2,3]
                     *              0             0             1 
   2538 assignedPatient[256,2,3]
@@ -6016,7 +6136,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2583 assignedPatient[301,2,3]
                     *              0             0             1 
   2584 assignedPatient[302,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   2585 assignedPatient[303,2,3]
                     *              0             0             1 
   2586 assignedPatient[304,2,3]
@@ -6066,13 +6186,13 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2608 assignedPatient[326,2,3]
                     *              0             0             1 
   2609 assignedPatient[1,2,4]
-                    *              1             0             1 
+                    *              0             0             1 
   2610 assignedPatient[2,2,4]
                     *              0             0             1 
   2611 assignedPatient[3,2,4]
-                    *              1             0             1 
+                    *              0             0             1 
   2612 assignedPatient[4,2,4]
-                    *              1             0             1 
+                    *              0             0             1 
   2613 assignedPatient[5,2,4]
                     *              0             0             1 
   2614 assignedPatient[6,2,4]
@@ -6082,7 +6202,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2616 assignedPatient[8,2,4]
                     *              0             0             1 
   2617 assignedPatient[9,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
   2618 assignedPatient[10,2,4]
                     *              0             0             1 
   2619 assignedPatient[11,2,4]
@@ -6094,7 +6214,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2622 assignedPatient[14,2,4]
                     *              0             0             1 
   2623 assignedPatient[15,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
   2624 assignedPatient[16,2,4]
                     *              0             0             1 
   2625 assignedPatient[17,2,4]
@@ -6120,11 +6240,11 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2635 assignedPatient[27,2,4]
                     *              0             0             1 
   2636 assignedPatient[28,2,4]
-                    *              1             0             1 
+                    *              0             0             1 
   2637 assignedPatient[29,2,4]
                     *              0             0             1 
   2638 assignedPatient[30,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
   2639 assignedPatient[31,2,4]
                     *              0             0             1 
   2640 assignedPatient[32,2,4]
@@ -6148,7 +6268,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2649 assignedPatient[41,2,4]
                     *              0             0             1 
   2650 assignedPatient[42,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
   2651 assignedPatient[43,2,4]
                     *              0             0             1 
   2652 assignedPatient[44,2,4]
@@ -6178,13 +6298,13 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2664 assignedPatient[56,2,4]
                     *              0             0             1 
   2665 assignedPatient[57,2,4]
-                    *              0             0             1 
-  2666 assignedPatient[58,2,4]
                     *              1             0             1 
+  2666 assignedPatient[58,2,4]
+                    *              0             0             1 
   2667 assignedPatient[59,2,4]
                     *              0             0             1 
   2668 assignedPatient[60,2,4]
-                    *              1             0             1 
+                    *              0             0             1 
   2669 assignedPatient[61,2,4]
                     *              0             0             1 
   2670 assignedPatient[62,2,4]
@@ -6224,7 +6344,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2687 assignedPatient[79,2,4]
                     *              0             0             1 
   2688 assignedPatient[80,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
   2689 assignedPatient[81,2,4]
                     *              0             0             1 
   2690 assignedPatient[82,2,4]
@@ -6754,11 +6874,11 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2952 assignedPatient[18,2,5]
                     *              0             0             1 
   2953 assignedPatient[19,2,5]
-                    *              1             0             1 
+                    *              0             0             1 
   2954 assignedPatient[20,2,5]
                     *              0             0             1 
   2955 assignedPatient[21,2,5]
-                    *              1             0             1 
+                    *              0             0             1 
   2956 assignedPatient[22,2,5]
                     *              0             0             1 
   2957 assignedPatient[23,2,5]
@@ -6774,7 +6894,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2962 assignedPatient[28,2,5]
                     *              0             0             1 
   2963 assignedPatient[29,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
   2964 assignedPatient[30,2,5]
                     *              0             0             1 
   2965 assignedPatient[31,2,5]
@@ -6800,7 +6920,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2975 assignedPatient[41,2,5]
                     *              0             0             1 
   2976 assignedPatient[42,2,5]
-                    *              1             0             1 
+                    *              0             0             1 
   2977 assignedPatient[43,2,5]
                     *              0             0             1 
   2978 assignedPatient[44,2,5]
@@ -6838,7 +6958,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2994 assignedPatient[60,2,5]
                     *              0             0             1 
   2995 assignedPatient[61,2,5]
-                    *              1             0             1 
+                    *              0             0             1 
   2996 assignedPatient[62,2,5]
                     *              0             0             1 
   2997 assignedPatient[63,2,5]
@@ -6846,9 +6966,9 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   2998 assignedPatient[64,2,5]
                     *              0             0             1 
   2999 assignedPatient[65,2,5]
-                    *              0             0             1 
-  3000 assignedPatient[66,2,5]
                     *              1             0             1 
+  3000 assignedPatient[66,2,5]
+                    *              0             0             1 
   3001 assignedPatient[67,2,5]
                     *              0             0             1 
   3002 assignedPatient[68,2,5]
@@ -6872,7 +6992,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3011 assignedPatient[77,2,5]
                     *              0             0             1 
   3012 assignedPatient[78,2,5]
-                    *              1             0             1 
+                    *              0             0             1 
   3013 assignedPatient[79,2,5]
                     *              0             0             1 
   3014 assignedPatient[80,2,5]
@@ -7076,11 +7196,11 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3113 assignedPatient[179,2,5]
                     *              0             0             1 
   3114 assignedPatient[180,2,5]
-                    *              1             0             1 
+                    *              0             0             1 
   3115 assignedPatient[181,2,5]
                     *              0             0             1 
   3116 assignedPatient[182,2,5]
-                    *              1             0             1 
+                    *              0             0             1 
   3117 assignedPatient[183,2,5]
                     *              0             0             1 
   3118 assignedPatient[184,2,5]
@@ -7122,11 +7242,11 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3136 assignedPatient[202,2,5]
                     *              0             0             1 
   3137 assignedPatient[203,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3138 assignedPatient[204,2,5]
                     *              0             0             1 
   3139 assignedPatient[205,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3140 assignedPatient[206,2,5]
                     *              0             0             1 
   3141 assignedPatient[207,2,5]
@@ -7222,7 +7342,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3186 assignedPatient[252,2,5]
                     *              0             0             1 
   3187 assignedPatient[253,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3188 assignedPatient[254,2,5]
                     *              0             0             1 
   3189 assignedPatient[255,2,5]
@@ -7320,7 +7440,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3235 assignedPatient[301,2,5]
                     *              0             0             1 
   3236 assignedPatient[302,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3237 assignedPatient[303,2,5]
                     *              0             0             1 
   3238 assignedPatient[304,2,5]
@@ -7370,9 +7490,9 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3260 assignedPatient[326,2,5]
                     *              0             0             1 
   3261 assignedBlock[1,1,1,1]
-                    *              1             0             1 
+                    *              0             0             1 
   3262 assignedBlock[1,2,1,1]
-                    *              1             0             1 
+                    *              0             0             1 
   3263 assignedBlock[1,3,1,1]
                     *              1             0             1 
   3264 assignedBlock[1,4,1,1]
@@ -7382,53 +7502,53 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3266 assignedBlock[1,6,1,1]
                     *              0             0             1 
   3267 assignedBlock[1,7,1,1]
-                    *              1             0             1 
+                    *              0             0             1 
   3268 assignedBlock[1,8,1,1]
-                    *              1             0             1 
+                    *              0             0             1 
   3269 assignedBlock[1,9,1,1]
                     *              0             0             1 
   3270 assignedBlock[1,10,1,1]
-                    *              0             0             1 
+                    *              1             0             1 
   3271 assignedBlock[1,11,1,1]
                     *              0             0             1 
   3272 assignedBlock[1,1,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
   3273 assignedBlock[1,2,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
   3274 assignedBlock[1,3,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
   3275 assignedBlock[1,4,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
   3276 assignedBlock[1,5,1,2]
-                    *              1             0             1 
+                    *              0             0             1 
   3277 assignedBlock[1,6,1,2]
                     *              1             0             1 
   3278 assignedBlock[1,7,1,2]
-                    *              0             0             1 
+                    *              1             0             1 
   3279 assignedBlock[1,8,1,2]
                     *              1             0             1 
   3280 assignedBlock[1,9,1,2]
-                    *              0             0             1 
-  3281 assignedBlock[1,10,1,2]
-                    *              0             0             1 
-  3282 assignedBlock[1,11,1,2]
-                    *              0             0             1 
-  3283 assignedBlock[1,1,1,3]
                     *              1             0             1 
+  3281 assignedBlock[1,10,1,2]
+                    *              1             0             1 
+  3282 assignedBlock[1,11,1,2]
+                    *              1             0             1 
+  3283 assignedBlock[1,1,1,3]
+                    *              0             0             1 
   3284 assignedBlock[1,2,1,3]
                     *              1             0             1 
   3285 assignedBlock[1,3,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
   3286 assignedBlock[1,4,1,3]
-                    *              1             0             1 
+                    *              0             0             1 
   3287 assignedBlock[1,5,1,3]
                     *              1             0             1 
   3288 assignedBlock[1,6,1,3]
-                    *              0             0             1 
+                    *              1             0             1 
   3289 assignedBlock[1,7,1,3]
-                    *              0             0             1 
+                    *              1             0             1 
   3290 assignedBlock[1,8,1,3]
-                    *              0             0             1 
+                    *              1             0             1 
   3291 assignedBlock[1,9,1,3]
                     *              1             0             1 
   3292 assignedBlock[1,10,1,3]
@@ -7438,13 +7558,13 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3294 assignedBlock[1,1,1,4]
                     *              1             0             1 
   3295 assignedBlock[1,2,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
   3296 assignedBlock[1,3,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
   3297 assignedBlock[1,4,1,4]
                     *              1             0             1 
   3298 assignedBlock[1,5,1,4]
-                    *              1             0             1 
+                    *              0             0             1 
   3299 assignedBlock[1,6,1,4]
                     *              1             0             1 
   3300 assignedBlock[1,7,1,4]
@@ -7456,29 +7576,29 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3303 assignedBlock[1,10,1,4]
                     *              0             0             1 
   3304 assignedBlock[1,11,1,4]
-                    *              0             0             1 
+                    *              1             0             1 
   3305 assignedBlock[1,1,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
   3306 assignedBlock[1,2,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
   3307 assignedBlock[1,3,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
   3308 assignedBlock[1,4,1,5]
                     *              0             0             1 
   3309 assignedBlock[1,5,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
   3310 assignedBlock[1,6,1,5]
                     *              0             0             1 
   3311 assignedBlock[1,7,1,5]
-                    *              1             0             1 
+                    *              0             0             1 
   3312 assignedBlock[1,8,1,5]
                     *              1             0             1 
   3313 assignedBlock[1,9,1,5]
                     *              0             0             1 
   3314 assignedBlock[1,10,1,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3315 assignedBlock[1,11,1,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3316 assignedBlock[1,1,2,1]
                     *              0             0             1 
   3317 assignedBlock[1,2,2,1]
@@ -7486,21 +7606,21 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3318 assignedBlock[1,3,2,1]
                     *              0             0             1 
   3319 assignedBlock[1,4,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
   3320 assignedBlock[1,5,2,1]
                     *              0             0             1 
   3321 assignedBlock[1,6,2,1]
-                    *              1             0             1 
+                    *              0             0             1 
   3322 assignedBlock[1,7,2,1]
                     *              0             0             1 
   3323 assignedBlock[1,8,2,1]
-                    *              0             0             1 
-  3324 assignedBlock[1,9,2,1]
-                    *              0             0             1 
-  3325 assignedBlock[1,10,2,1]
                     *              1             0             1 
-  3326 assignedBlock[1,11,2,1]
+  3324 assignedBlock[1,9,2,1]
+                    *              1             0             1 
+  3325 assignedBlock[1,10,2,1]
                     *              0             0             1 
+  3326 assignedBlock[1,11,2,1]
+                    *              1             0             1 
   3327 assignedBlock[1,1,2,2]
                     *              0             0             1 
   3328 assignedBlock[1,2,2,2]
@@ -7514,13 +7634,13 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3332 assignedBlock[1,6,2,2]
                     *              0             0             1 
   3333 assignedBlock[1,7,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
   3334 assignedBlock[1,8,2,2]
                     *              0             0             1 
   3335 assignedBlock[1,9,2,2]
                     *              0             0             1 
   3336 assignedBlock[1,10,2,2]
-                    *              1             0             1 
+                    *              0             0             1 
   3337 assignedBlock[1,11,2,2]
                     *              0             0             1 
   3338 assignedBlock[1,1,2,3]
@@ -7534,11 +7654,11 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3342 assignedBlock[1,5,2,3]
                     *              0             0             1 
   3343 assignedBlock[1,6,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   3344 assignedBlock[1,7,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   3345 assignedBlock[1,8,2,3]
-                    *              1             0             1 
+                    *              0             0             1 
   3346 assignedBlock[1,9,2,3]
                     *              0             0             1 
   3347 assignedBlock[1,10,2,3]
@@ -7550,19 +7670,19 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3350 assignedBlock[1,2,2,4]
                     *              0             0             1 
   3351 assignedBlock[1,3,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
   3352 assignedBlock[1,4,2,4]
                     *              0             0             1 
   3353 assignedBlock[1,5,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
   3354 assignedBlock[1,6,2,4]
                     *              0             0             1 
   3355 assignedBlock[1,7,2,4]
-                    *              1             0             1 
+                    *              0             0             1 
   3356 assignedBlock[1,8,2,4]
                     *              0             0             1 
   3357 assignedBlock[1,9,2,4]
-                    *              0             0             1 
+                    *              1             0             1 
   3358 assignedBlock[1,10,2,4]
                     *              1             0             1 
   3359 assignedBlock[1,11,2,4]
@@ -7574,25 +7694,25 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3362 assignedBlock[1,3,2,5]
                     *              0             0             1 
   3363 assignedBlock[1,4,2,5]
-                    *              1             0             1 
+                    *              0             0             1 
   3364 assignedBlock[1,5,2,5]
                     *              0             0             1 
   3365 assignedBlock[1,6,2,5]
                     *              1             0             1 
   3366 assignedBlock[1,7,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3367 assignedBlock[1,8,2,5]
                     *              0             0             1 
   3368 assignedBlock[1,9,2,5]
-                    *              0             0             1 
-  3369 assignedBlock[1,10,2,5]
                     *              1             0             1 
+  3369 assignedBlock[1,10,2,5]
+                    *              0             0             1 
   3370 assignedBlock[1,11,2,5]
                     *              0             0             1 
   3371 assignedBlock[2,1,1,1]
                     *              0             0             1 
   3372 assignedBlock[2,2,1,1]
-                    *              0             0             1 
+                    *              1             0             1 
   3373 assignedBlock[2,3,1,1]
                     *              0             0             1 
   3374 assignedBlock[2,4,1,1]
@@ -7668,7 +7788,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3409 assignedBlock[2,6,1,4]
                     *              0             0             1 
   3410 assignedBlock[2,7,1,4]
-                    *              0             0             1 
+                    *              1             0             1 
   3411 assignedBlock[2,8,1,4]
                     *              0             0             1 
   3412 assignedBlock[2,9,1,4]
@@ -7722,7 +7842,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3436 assignedBlock[2,11,2,1]
                     *              0             0             1 
   3437 assignedBlock[2,1,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
   3438 assignedBlock[2,2,2,2]
                     *              0             0             1 
   3439 assignedBlock[2,3,2,2]
@@ -7790,7 +7910,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3470 assignedBlock[2,1,2,5]
                     *              0             0             1 
   3471 assignedBlock[2,2,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3472 assignedBlock[2,3,2,5]
                     *              0             0             1 
   3473 assignedBlock[2,4,2,5]
@@ -7860,7 +7980,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3505 assignedBlock[3,3,1,3]
                     *              0             0             1 
   3506 assignedBlock[3,4,1,3]
-                    *              0             0             1 
+                    *              1             0             1 
   3507 assignedBlock[3,5,1,3]
                     *              0             0             1 
   3508 assignedBlock[3,6,1,3]
@@ -7932,7 +8052,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3541 assignedBlock[3,6,2,1]
                     *              0             0             1 
   3542 assignedBlock[3,7,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
   3543 assignedBlock[3,8,2,1]
                     *              0             0             1 
   3544 assignedBlock[3,9,2,1]
@@ -7950,7 +8070,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3550 assignedBlock[3,4,2,2]
                     *              0             0             1 
   3551 assignedBlock[3,5,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
   3552 assignedBlock[3,6,2,2]
                     *              0             0             1 
   3553 assignedBlock[3,7,2,2]
@@ -8150,7 +8270,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3650 assignedBlock[4,5,2,1]
                     *              0             0             1 
   3651 assignedBlock[4,6,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
   3652 assignedBlock[4,7,2,1]
                     *              0             0             1 
   3653 assignedBlock[4,8,2,1]
@@ -8184,7 +8304,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3667 assignedBlock[4,11,2,2]
                     *              0             0             1 
   3668 assignedBlock[4,1,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
   3669 assignedBlock[4,2,2,3]
                     *              0             0             1 
   3670 assignedBlock[4,3,2,3]
@@ -8342,7 +8462,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3746 assignedBlock[5,2,1,5]
                     *              0             0             1 
   3747 assignedBlock[5,3,1,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3748 assignedBlock[5,4,1,5]
                     *              0             0             1 
   3749 assignedBlock[5,5,1,5]
@@ -8366,7 +8486,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3758 assignedBlock[5,3,2,1]
                     *              0             0             1 
   3759 assignedBlock[5,4,2,1]
-                    *              0             0             1 
+                    *              1             0             1 
   3760 assignedBlock[5,5,2,1]
                     *              0             0             1 
   3761 assignedBlock[5,6,2,1]
@@ -8386,7 +8506,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3768 assignedBlock[5,2,2,2]
                     *              0             0             1 
   3769 assignedBlock[5,3,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
   3770 assignedBlock[5,4,2,2]
                     *              0             0             1 
   3771 assignedBlock[5,5,2,2]
@@ -8408,7 +8528,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3779 assignedBlock[5,2,2,3]
                     *              0             0             1 
   3780 assignedBlock[5,3,2,3]
-                    *              0             0             1 
+                    *              1             0             1 
   3781 assignedBlock[5,4,2,3]
                     *              0             0             1 
   3782 assignedBlock[5,5,2,3]
@@ -8456,7 +8576,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3803 assignedBlock[5,4,2,5]
                     *              0             0             1 
   3804 assignedBlock[5,5,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3805 assignedBlock[5,6,2,5]
                     *              0             0             1 
   3806 assignedBlock[5,7,2,5]
@@ -8494,7 +8614,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3822 assignedBlock[6,1,1,2]
                     *              0             0             1 
   3823 assignedBlock[6,2,1,2]
-                    *              0             0             1 
+                    *              1             0             1 
   3824 assignedBlock[6,3,1,2]
                     *              0             0             1 
   3825 assignedBlock[6,4,1,2]
@@ -8558,7 +8678,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3854 assignedBlock[6,11,1,4]
                     *              0             0             1 
   3855 assignedBlock[6,1,1,5]
-                    *              0             0             1 
+                    *              1             0             1 
   3856 assignedBlock[6,2,1,5]
                     *              0             0             1 
   3857 assignedBlock[6,3,1,5]
@@ -8690,7 +8810,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3920 assignedBlock[6,11,2,5]
                     *              0             0             1 
   3921 assignedBlock[7,1,1,1]
-                    *              0             0             1 
+                    *              1             0             1 
   3922 assignedBlock[7,2,1,1]
                     *              0             0             1 
   3923 assignedBlock[7,3,1,1]
@@ -8828,7 +8948,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   3989 assignedBlock[7,3,2,2]
                     *              0             0             1 
   3990 assignedBlock[7,4,2,2]
-                    *              0             0             1 
+                    *              1             0             1 
   3991 assignedBlock[7,5,2,2]
                     *              0             0             1 
   3992 assignedBlock[7,6,2,2]
@@ -8894,7 +9014,7 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
   4022 assignedBlock[7,3,2,5]
                     *              0             0             1 
   4023 assignedBlock[7,4,2,5]
-                    *              0             0             1 
+                    *              1             0             1 
   4024 assignedBlock[7,5,2,5]
                     *              0             0             1 
   4025 assignedBlock[7,6,2,5]
@@ -8912,8 +9032,8 @@ Objective:  objectiveFunction = 6684750 (MAXimum)
 
 Integer feasibility conditions:
 
-KKT.PE: max.abs.err = 0.00e+00 on row 0
-        max.rel.err = 0.00e+00 on row 0
+KKT.PE: max.abs.err = 4.44e-16 on row 421
+        max.rel.err = 7.40e-17 on row 426
         High quality
 
 KKT.PB: max.abs.err = 0.00e+00 on row 0

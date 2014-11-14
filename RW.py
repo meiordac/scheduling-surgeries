@@ -30,7 +30,7 @@ class ReadExcel:
         for line in f:
            lines.append(line.rstrip('\n'))
     #me muevo en el archivo por la cantidad de restricciones que existan
-    i = len(pr.patients) + 3*(len(pr.days))*(len(pr.blocks)) + 2*len(pr.days)+len(pr.days)*len(pr.operatingRooms) + 3  
+    i = len(pr.patients) + 2*(len(pr.days))*(len(pr.blocks)) + 2*len(pr.days)+len(pr.days)*len(pr.operatingRooms)+len(pr.patientTypes)*len(pr.days)*len(pr.blocks) + 3  
     print i
     #primera linea son cantidad de variables, iteraciones y luego valor de FO
     with open('Output/Patients.csv', 'wb') as csvfile:

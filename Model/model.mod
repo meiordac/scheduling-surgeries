@@ -64,7 +64,10 @@ maximize objectiveFunction:
 
 #subject to rest_corresponding_patient_types{p in patients,d in days, b in blocks}:
 #sum{pt in patientTypes : patientTypeByPatient[p] !=pt } assignedPatient[p,pt,b,d] = 0;
-  
+
+#subject to rest_max_blocks {b in blocks, d in days}:
+#sum{pt in patientTypes, op in operatingRooms} assignedBlock[pt,op,b,d] <= totalBlocks[b,d];
+
 subject to rest_no_duplicate_patients {p in patients}: 
   sum{d in days, b in blocks} assignedPatient[p,b,d] <= 1;
 
@@ -79,9 +82,10 @@ subject to rest_max_or{d in days}:
   
 subject to rest_anesthesists{d in days, b in blocks}:
   sum{p in patients} assignedPatient[p,b,d]*anesthesiaType[p] <= anesthetists[b,d];
-
-subject to rest_max_blocks {b in blocks, d in days}:
-  sum{pt in patientTypes, op in operatingRooms} assignedBlock[pt,op,b,d] <= totalBlocks[b,d];
    
 subject to rest_beds {d in days}:
   sum{p in patients, b in blocks} assignedPatient[p,b,d] <= beds[d];
+  
+subject to rest_corresponding_patient_rooms {pt in patientTypes, b in blocks, d in days}:
+  (sum{p in patients : patientTypeByPatient[p] =pt } assignedPatient[p,b,d])/400 <= sum{op in operatingRooms} assignedBlock[pt,op,b,d];
+  
