@@ -12,15 +12,14 @@ set blocks := 1 2; #block surgical durations
 #5 PABELLON (15:30 EN ADELANTE)
 
 #set surgeons ;
-set operatingRooms := 1 2 3 4 5 6 7 8 9 10 11;
-#por simplicidad se consideran todos iguales por ahora
-#1 -> PABELLONES CIRUGIA MAYOR PROGRAMADA
-#2 -> PABELLON ANESTESIA LOCAL
-#3 -> PABELLON ANGIOGRAFIA
-#4 -> PABELLON CMA
-#5 -> PABELLON SUS 
+set operatingRooms := 1 2 3 4 5 6 7 8 9 10;
+#1 -9 -> PABELLONES CIRUGIA MAYOR PROGRAMADA (reserva 5 para cirugía, 2 para urología y 2 para trauma)
+# -> PABELLON ANESTESIA LOCAL
+# -> PABELLON ANGIOGRAFIA
+#10 -> PABELLON CMA
+# -> PABELLON SUS 
 
-set patientTypes := 1 2 3 4 5 6 7; #tipos de pacientes 
+set surgeryTypes := 1 2 3 4 5 6 7 8 9; #tipos de pacientes 
 #1->VASCULAR
 #2->DIGESTIVO BAJO
 #3->DIGESTIVO ALTO
@@ -28,28 +27,49 @@ set patientTypes := 1 2 3 4 5 6 7; #tipos de pacientes
 #5->HEPATOBILIAR
 #6->CIRUGIA PLASTICA
 #7->CABEZA Y CUELLO
+#8->TRAUMA
+#9->UROLOGIA
+
+param canPerformSurgeryOR:
+  1 2 3 4 5 6 7 8 9 10  :=
+1 1 1 1 1 1 0 0 0 0 1  
+2 1 1 1 1 1 0 0 0 0 0  
+3 1 1 1 1 1 0 0 0 0 1  
+4 1 1 1 1 1 0 0 0 0 0 
+5 1 1 1 1 1 0 0 0 0 1 
+6 1 1 1 1 1 0 0 0 0 1  
+7 1 1 1 1 1 0 0 0 0 1  
+8 0 0 0 0 0 1 1 0 0 0 
+9 0 0 0 0 0 0 0 1 1 0 
+;  
+
 
 param blockDuration:=
 1 6
 2 11;
 
 param alpha:=
-1 5
-2 3
-3 4
-4 1
-5 2
-6 1
-7 3;
+1 10
+2 4
+3 5
+4 5
+5 8
+6 2
+7 5
+8 8
+9 5
+;
 
 param beta:= 10;
+param gamma:= 0.01;
+param delta:= 0.5;
 
 param ORAvailable:=
-1 11
-2 11
-3 11
-4 10
-5 11;
+1 8
+2 9
+3 9
+4 9
+5 9;
 
 param totalBlocks:
   1 2 3 4 5:=
@@ -67,3 +87,4 @@ param beds:=
 3 18
 4 25
 5 15;
+

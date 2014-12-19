@@ -10,7 +10,6 @@ class Engine:
     print "engine initiated"
     
   def LoadPatients(self,rows):
-    #se carga la lista de pacientes que seran procesados
     f = open('Model/variable.dat', 'w+')
     f.write('\n \nset patients := ')
     for r in rows:
@@ -21,26 +20,29 @@ class Engine:
       waitingPeriod=datetime.datetime.now() -datetime.datetime.strptime((r['Date']), "%Y-%m-%d") 
       f.write(str(int(r['Patient']))+' '+str(waitingPeriod.days) +'\n')
     f.write(';\n')
-    f.write('\n param ges := ')
+    self.AddParameter(rows, f, 'Patient', 'ges')
+    self.AddParameter(rows, f, 'Patient', 'reInterventions')
+    self.AddParameter(rows, f, 'Patient', 'surgeryLength')
+    self.AddParameter(rows, f, 'Patient', 'anesthesiaType')
+    self.AddParameter(rows, f, 'Patient', 'surgeryTypePatient')
+    #cuenta la cantidad de pacientes de tipo p y los agrega al arreglo countPatients
+    countPatients = defaultdict(int)
     for r in rows:
-      f.write(str(int(r['Patient']))+' '+str(int(r['GES']))+'\n')
-    f.write(';\n')
-    f.write('\n param surgeryLength := ')
-    for r in rows:
-      f.write(str(int(r['Patient']))+' '+str(r['SurgeryLength'])+'\n')
-    f.write(';')
-    f.write('\n param anesthesiaType := ')
-    for r in rows:
-      f.write(str(int(r['Patient']))+' '+str(r['anesthesiaType'])+'\n')
-    f.write(';')
-    f.write('\n param patientTypeByPatient := ')
-    for r in rows:
-      f.write(str(int(r['Patient']))+' '+str(r['PatientType'])+'\n')
-    f.write(';')
+      countPatients[r['surgeryTypePatient']] += 1  
+    #entrega al parametro numPatients{p} la cantidad de pacientes de ese tpo
+    f.write('\n param numPatients := ')
+    for cp in range(1,len(countPatients)+1):
+      f.write(str(cp)+' '+str(countPatients[cp])+'\n')
+    f.write(';') 
     f.close()
-    
-  def CreateInputFile(self):    
-  #se crea el archivo de input final que junta el modelo.dat (parametros fijos) y los parametros variables      
+  
+  def AddParameter(self,rows, f, num, parameter):
+    f.write('\n param '+parameter+ ':= ')
+    for r in rows:
+      f.write(str(int(r[num]))+' '+str(int(r[parameter]))+'\n')
+    f.write(';\n')
+  
+  def CreateInputFile(self):         
     filenames = ['Model/constant.dat', 'Model/variable.dat']
     with open('Model/model.dat', 'w') as outfile:
       for fname in filenames:
@@ -53,20 +55,12 @@ class Engine:
     self.CreateInputFile()
     #se crea el problema y se le pasan el modelo y el .dat
     pr = glpk.glpk("Model/model.mod","Model/model.dat")
-    #cuenta la cantidad de pacientes de tipo p y los agrega al arreglo countPatients
-    countPatients = defaultdict(int)
-    for r in rows:
-      countPatients[r['PatientType']] += 1  
-    #entrega al parametro numPatients{p} la cantidad de pacientes de ese tpo
-    for p in range(1,len(countPatients)+1):
-      pr.numPatients[p] = countPatients[p]
-    
     return pr
  
   def Solve(self,pr):
     print "Solving problem..."
     #capture = subprocess.check_output(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--write", "Output/write.out"])
-    subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","500", "--output", "Output/output.out", "--write", "Output/write.out"])
+    subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","3600", "--output", "Output/output.out", "--write", "Output/write.out"])
     #subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--output", "Output/output.out", "--write", "Output/write.out"])
     return pr.solution()
     
