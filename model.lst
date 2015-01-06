@@ -1,0 +1,164 @@
+GAMS Rev 238  WEX-WEI 23.8.1 x86_64/MS Windows                                                                                                                                                                                         01/06/15 00:01:36 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Sets
+   2          d       days
+   3          b               blocks
+   4          opr             operatingRooms
+   5          st              surgeryTypes
+   6          p               patients
+   7          ;
+   8  Parameters
+   9          numPatients(st)                 numero de pacientes del tipo p, cantidad de casos de ese tipo
+  10          ORAvailable(d)                  salas de operaciones del tip op disponibles en dia d
+  11          blockDuration(b)                duracion del bloque b
+  12          alpha(st)                               nivel de prioridad del paciente tipo p, es un ponderador usado en funcion objetivo
+  13          ges(p)                                  pacientes están en el ges o no
+  14          waitingPeriod(p)                tiempo de espera hasta el momento de un paciente determinado
+  15          surgeryLength(p)                tiempo de duracion de la cirugia para el paciente p
+  16          anesthesiaType(p)               anestecia local 0 o general 1
+  17          surgeryTypePatient(p)   tipo de paciente
+  18          beds(d)                                 cantidad de camas disponibles en un dia d
+  19          reInterventions(p)              cantidad de reintervensiones paciente p
+  20          anesthetists(d)                 cantidad de anestecistas disponibles para un dia d en el tipo de bloque
+  21          ;
+  22   
+  23  Table
+  24          canPerformSurgeryOR(st, opr) se puede hacer la cirugia st en el pabellon opr
+****                                                                                     $361,362
+  25          ;
+****  $463
+  26   
+  27  Scalars
+  28          beta                                    constante que le da el peso a que un paciente sea ges o no
+  29          gamma                                   peso de los dias de espera
+  30          delta                                   peso de las reintervenciones
+  31          ;
+  32   
+  33  Variables
+  34          x(st,opr,b,d)                   se asigna el tipo de cirugía st al pabellon opr en el bloque b el dia d
+  35          y(p,b,d)                                si el paciente p se operara el dia d en el bloque b
+  36          z                                               funcion objetivo
+  37  ;
+  38   
+  39  Binary variable x;
+  40  Binary variable y;
+  41   
+  42  Equations
+  43   
+  44          objective_function                                              funcion objetivo
+  45          rest_no_duplicate_patients(p)                   asegura que no haya pacientes duplicados
+  46          rest_no_duplicate_block(opr,d)                  asegura que no haya pabellones duplicados
+  47          rest_max_num_patients_per_block(b,d)    no hay mas pacientes que el largo de los bloques
+  48          rest_max_or(d)                                          hay suficientes pabellones
+  49          rest_anesthesists(d)                            hay suficientes anestesistas
+  50          rest_beds(d)                                            hay suficientes camas
+  51          rest_correspond_patient_rooms(st,b,d)   hay al menos un pabellon para operar a un paciente tipo st
+GAMS Rev 238  WEX-WEI 23.8.1 x86_64/MS Windows                                                                                                                                                                                         01/06/15 00:01:36 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+  52          rest_perform_surgery(b,d,st,opr)                se puede realizar la cirugia en el pabellon
+  53          ;
+  54   
+  55  objective_function ..
+  56  z =e= sum((st,b,d,p,opr), ( x(st,opr,b,d)*alpha(st) +
+  57  y(p,b,d)*(
+  58  waitingPeriod(p)*gamma +
+  59  beta*ges(p) +
+  60  reInterventions(p)*delta))
+  61  );
+  62   
+  63  rest_no_duplicate_patients(p)   ..
+  64          sum((d,b), y(p,b,d)) =l= 1;
+  65   
+  66  rest_no_duplicate_block(opr,d)  ..
+  67          sum((st,b),x(st,opr,b,d)) =l= 1;
+  68   
+  69  rest_max_num_patients_per_block(b,d) ..
+  70          sum((p),y(p,b,d)*surgeryLength(p)) =l= blockDuration(b);
+  71   
+  72  rest_max_or(d)  ..
+  73          sum((st,opr,b), x(st,opr,b,d)) =l= ORAvailable(d);
+  74   
+  75  rest_anesthesists(d)    ..
+  76          sum((p), y(p,b,d)*anesthesiaType(p)) =l= anesthetists(d);
+****                        $149
+  77   
+  78  rest_beds(d)    ..
+  79  sum((p,b), y(p,b,d)) =l= beds(d);
+  80   
+  81  rest_correspond_patient_rooms(st,b,d)$(surgeryTypePatient(p)=st)        ..
+****                                                             $149$148,135
+  82          (sum((p),y(p,b,d))/numPatients(st)) =l= sum((opr),x(st,opr,b,d));
+  83   
+  84  rest_perform_surgery(b,d,st,opr)        ..
+  85          x(st,opr,b,d) =l= canPerformSurgeryOR(st,opr)
+  86   
+  87   
+  88  * Creación y ejecución del modelo
+  89   
+  90  $include "model.inc"
+****                     $282
+  91   
+  92  MODEL scheduling        / all /;
+  93   
+  94  *iteraciones
+  95  OPTION ITERLIM = 1900000000;
+  96  OPTION SYSOUT = ON;
+  97  *tiempo límite en segundos
+  98  OPTION RESLIM = 36000;
+  99  *grado de tolerancia
+ 100  OPTION OPTCR = 0.01;
+ 101  *numero deseado de filas
+GAMS Rev 238  WEX-WEI 23.8.1 x86_64/MS Windows                                                                                                                                                                                         01/06/15 00:01:36 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 102  *OPTION LIMROW = 100;
+ 103  *número deseado de columnas
+ 104  *OPTION LIMCOL = 0;
+ 105  *OPTION optfile = 1;
+ 106   
+ 107  solve scheduling using mip minimizing z ;
+****                                          $257
+ 108  *display x.l, x.m ;
+
+**** LIST OF STRAY NAMES - CHECK DECLARATIONS FOR SPURIOUS COMMAS
+**** STRAY NAME cantidad OF TYPE PARAM
+**** STRAY NAME es OF TYPE PARAM
+GAMS Rev 238  WEX-WEI 23.8.1 x86_64/MS Windows                                                                                                                                                                                         01/06/15 00:01:36 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Error Messages
+
+
+135  Incompatible operands for relational operator
+148  Dimension different - The symbol is referenced with more/less
+        indices as declared
+149  Uncontrolled set entered as constant
+257  Solve statement not checked because of previous errors
+282  Unable to open include file
+361  Values for domain 1 are unknown - no checking possible
+362  Values for domain 2 are unknown - no checking possible
+463  The column section in the previous table is missing
+
+**** 9 ERROR(S)   0 WARNING(S)
+
+
+COMPILATION TIME     =        0.000 SECONDS      2 Mb  WEX238-238 Mar 12, 2012
+
+
+USER: Gary Goldstein                                 G010614:2121CA-WIN
+      Decision Ware, Inc.                                        DC2807
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\Matias\Desktop\fondef-tesis\Model\model.gms
+Output     C:\Users\Matias\Desktop\fondef-tesis\model.lst
+
+**** USER ERROR(S) ENCOUNTERED

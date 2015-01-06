@@ -1,4 +1,4 @@
-import glpk
+#import glpk
 import time
 import datetime
 from collections import defaultdict
@@ -8,7 +8,49 @@ class Engine:
   
   def __init__(self):
     print "engine initiated"
+	
+  def loadPatientsGams(self,rows):
+    f = open('Model/variable.inc', 'w+')
+    f.write('\n \n set patients(p) /')
+    for r in rows:
+      f.write(str(int(r['Patient']))+' ')
+    f.write('/ ;\n')
+    f.write('\n param waitingPeriod(p) / ')
+    for r in rows:
+      waitingPeriod=datetime.datetime.now() -datetime.datetime.strptime((r['Date']), "%Y-%m-%d") 
+      f.write(str(int(r['Patient']))+' '+str(waitingPeriod.days) +'\n')
+    f.write('/ ; \n')
+    self.addParameterGams(rows, f, 'Patient', 'ges','p')
+    self.addParameterGams(rows, f, 'Patient', 'reInterventions','p')
+    self.addParameterGams(rows, f, 'Patient', 'surgeryLength','p')
+    self.addParameterGams(rows, f, 'Patient', 'anesthesiaType','p')
+    self.addParameterGams(rows, f, 'Patient', 'surgeryTypePatient','p')
+    #cuenta la cantidad de pacientes de tipo p y los agrega al arreglo countPatients
+    countPatients = defaultdict(int)
+    for r in rows:
+      countPatients[r['surgeryTypePatient']] += 1  
+    #entrega al parametro numPatients{p} la cantidad de pacientes de ese tpo
+    f.write('\n param numPatients(st) /')
+    for cp in range(1,len(countPatients)+1):
+      f.write(str(cp)+' '+str(countPatients[cp])+'\n')
+    f.write('/ ;') 
+    f.close()
     
+  def addParameterGams(self,rows, f, num, parameter, charParameter):
+    f.write('\n param '+parameter+ '('+charParameter+') /')
+    for r in rows:
+      f.write(str(int(r[num]))+' '+str(int(r[parameter]))+'\n')
+    f.write('/ ;\n')
+
+  
+  def createInputFileGams(self):         
+    filenames = ['Model/constant.inc', 'Model/variable.inc']
+    with open('Model/model.inc', 'w') as outfile:
+      for fname in filenames:
+	with open(fname) as infile:
+	  for line in infile:
+	    outfile.write(line)
+	
   def LoadPatients(self,rows):
     f = open('Model/variable.dat', 'w+')
     f.write('\n \nset patients := ')
@@ -51,18 +93,28 @@ class Engine:
 	    outfile.write(line)
     
   def LoadProblem(self,rows):
-    self.LoadPatients(rows)
-    self.CreateInputFile()
+	self.LoadPatients(rows)
+	self.CreateInputFile()
+	self.loadPatientsGams(rows)
+	self.createInputFileGams()
     #se crea el problema y se le pasan el modelo y el .dat
-    pr = glpk.glpk("Model/model.mod","Model/model.dat")
-    return pr
+    #pr = glpk.glpk("Model/model.mod","Model/model.dat")
+    #return pr
  
-  def Solve(self,pr):
+  def solveGLPK(self,pr):
     print "Solving problem..."
     #capture = subprocess.check_output(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","60", "--write", "Output/write.out"])
     subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--tmlim","360", "--output", "Output/output.out", "--write", "Output/write.out"])
     #subprocess.call(["glpsol", "--math", "Model/model.mod", "--data", "Model/model.dat", "--output", "Output/output.out", "--write", "Output/write.out"])
     return pr.solution()
+
+  def solveGams(self):
+	gamspath="C:\GAMS\win64\23.8"
+	filename="Model\model.gms"
+	subprocess.call(["gams",  filename])
     
+	
+    
+   
 
     
