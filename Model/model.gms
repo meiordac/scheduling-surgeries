@@ -49,7 +49,7 @@ rest_beds(d)	..
 sum((p,b), y(p,b,d)) =l= beds(d);
 
 rest_correspond_patient_rooms(st,b,d)	..
-	(sum((p)$(surgeryTypePatient(p)=st),y(p,b,d))/numPatients(st)) =l= sum((opr),x(st,opr,b,d));
+	(sum((p)$(matrixPatientType(p,st)),y(p,b,d))/numPatients(st)) =l= sum((opr),x(st,opr,b,d));
 
 rest_perform_surgery(b,d,st,opr)	..
 	x(st,opr,b,d) =l= canPerformSurgeryOR(st,opr)

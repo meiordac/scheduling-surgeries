@@ -34,12 +34,12 @@ class Engine:
     for cp in range(1,len(countPatients)+1):
       f.write(str(cp)+' '+str(countPatients[cp])+'\n')
     f.write('/ ;') 
-	f.write('\n parameter matrixPatientType(p,st) /')
+    f.write('\n parameter matrixPatientType(p,st) ')
     for r in rows:
 	  f.write('\n'+str(int(r['Patient'])) +' ')
 	  for cp in range(1,len(countPatients)+1):
-	    f.write(str(cp)+' ')
-    f.write('/ ;') 
+	    f.write(str(int(cp==int(r['surgeryTypePatient'])))+' ')
+    f.write(' ;') 
 	
     f.close()
     
