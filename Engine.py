@@ -11,11 +11,10 @@ class Engine:
 	
   def loadPatientsGams(self,rows):
     f = open('Model/variable.inc', 'w+')
-    f.write('\n \n set patients(p) /')
-    for r in rows:
-      f.write(str(int(r['Patient']))+' ')
+    f.write('\n \n set p patients /')
+    f.write(str(int(rows[0]['Patient']))+"*"+str(int(rows[len(rows)-1]['Patient'])))
     f.write('/ ;\n')
-    f.write('\n param waitingPeriod(p) / ')
+    f.write('\n parameter waitingPeriod(p) / ')
     for r in rows:
       waitingPeriod=datetime.datetime.now() -datetime.datetime.strptime((r['Date']), "%Y-%m-%d") 
       f.write(str(int(r['Patient']))+' '+str(waitingPeriod.days) +'\n')
@@ -25,19 +24,27 @@ class Engine:
     self.addParameterGams(rows, f, 'Patient', 'surgeryLength','p')
     self.addParameterGams(rows, f, 'Patient', 'anesthesiaType','p')
     self.addParameterGams(rows, f, 'Patient', 'surgeryTypePatient','p')
+
     #cuenta la cantidad de pacientes de tipo p y los agrega al arreglo countPatients
     countPatients = defaultdict(int)
     for r in rows:
       countPatients[r['surgeryTypePatient']] += 1  
     #entrega al parametro numPatients{p} la cantidad de pacientes de ese tpo
-    f.write('\n param numPatients(st) /')
+    f.write('\n parameter numPatients(st) /')
     for cp in range(1,len(countPatients)+1):
       f.write(str(cp)+' '+str(countPatients[cp])+'\n')
     f.write('/ ;') 
+	f.write('\n parameter matrixPatientType(p,st) /')
+    for r in rows:
+	  f.write('\n'+str(int(r['Patient'])) +' ')
+	  for cp in range(1,len(countPatients)+1):
+	    f.write(str(cp)+' ')
+    f.write('/ ;') 
+	
     f.close()
     
   def addParameterGams(self,rows, f, num, parameter, charParameter):
-    f.write('\n param '+parameter+ '('+charParameter+') /')
+    f.write('\n parameter '+parameter+ '('+charParameter+') /')
     for r in rows:
       f.write(str(int(r[num]))+' '+str(int(r[parameter]))+'\n')
     f.write('/ ;\n')
@@ -109,7 +116,7 @@ class Engine:
     return pr.solution()
 
   def solveGams(self):
-	gamspath="C:\GAMS\win64\23.8"
+	gamspath="C:\GAMS\win64\23.8\gams"
 	filename="Model\model.gms"
 	subprocess.call(["gams",  filename])
     
