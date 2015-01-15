@@ -10,9 +10,9 @@ table canPerformSurgeryOR(st, opr) 'se puede realizar la cirugia'
 	1 2 3 4 5 6 7 8 9 10  
 
 1 	1 1 1 1 1 0 0 0 0 1  
-2 	1 1 1 1 1 0 0 0 0 0  
+2 	1 1 1 1 1 0 0 0 0 1  
 3	1 1 1 1 1 0 0 0 0 1  
-4 	1 1 1 1 1 0 0 0 0 0 
+4 	1 1 1 1 1 0 0 0 0 1 
 5 	1 1 1 1 1 0 0 0 0 1 
 6 	1 1 1 1 1 0 0 0 0 1  
 7 	1 1 1 1 1 0 0 0 0 1  
@@ -26,15 +26,17 @@ blockDuration(b)
 	2 11	/
 
 alpha(st)
-/	1 10
-2 4
-3 5
-4 5
-5 8
-6 2
-7 5
-8 8
-9 5	/
+/	
+1	5
+2	4
+3	4
+4	1
+5	4
+6	1
+7	5
+8	2
+9	3
+/
 
 ORAvailable(d)
 /
@@ -63,6 +65,6 @@ beds(d)
 ;
 
 Scalars
-beta	/10/
+beta	/1000/
 gamma	/0.01/
-delta	/0.5/;
+delta	/5/;

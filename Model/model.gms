@@ -23,12 +23,8 @@ Equations
 	;
 
 objective_function ..	
-z =e= sum((st,b,d,p,opr), ( x(st,opr,b,d)*alpha(st) +
-y(p,b,d)*(
-waitingPeriod(p)*gamma + 
-beta*ges(p) + 
-reInterventions(p)*delta))
-);
+z =e= (sum((st,b,d,opr), ( x(st,opr,b,d)*alpha(st))) + sum((p,b,d), y(p,b,d)*(waitingPeriod(p)*gamma + beta*ges(p) + reInterventions(p)*delta)))
+;
   
 rest_no_duplicate_patients(p)	.. 
 	sum((d,b), y(p,b,d)) =l= 1;
@@ -57,17 +53,15 @@ rest_perform_surgery(b,d,st,opr)	..
 
 * Creación y ejecución del modelo
 
-
-
 MODEL scheduling	/ all /;
 
 *iteraciones
 OPTION ITERLIM = 1900000000;
 OPTION SYSOUT = ON;
 *tiempo límite en segundos
-OPTION RESLIM = 3600;
+OPTION RESLIM = 360;
 *grado de tolerancia
-OPTION OPTCR = 0.01;
+OPTION OPTCR = 0.001;
 *numero deseado de filas
 *OPTION LIMROW = 100;
 *número deseado de columnas
@@ -76,3 +70,36 @@ OPTION OPTCR = 0.01;
 
 solve scheduling using mip maximizing z ;
 *display x.l, x.m ;
+
+
+* Obtener los datos del modelo
+
+file vx /x(st,opr,b,d).txt/;
+put vx;
+loop(st,
+         loop(opr,
+                 loop(b,
+                         loop(d,
+                                 if(x.l(st,opr,b,d) > 0,
+                                 put  d.tl, opr.tl, b.tl,  st.tl;
+                                 put""/
+                                 );
+                        );
+                  );
+         );
+);
+
+* Obtener los datos del modelo
+
+file vy /y(p,b,d).txt/;
+put vy;
+loop(p,
+        loop(b,
+                loop(d,
+                        if(y.l(p,b,d) > 0,
+                            put  p.tl, d.tl, b.tl;
+                            put""/
+                           );
+                    );
+            );
+);
