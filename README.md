@@ -12,3 +12,4 @@ of resources involved.
 * You need to install the library glpk (GNU Linear Programming Kit) in case you want to use this library or GAMS, I've implemented models for these two.
 * All the input is in Excel files, in the input folder, the program reads them and passes them to the engine, and prepares the files for the solvers (depending on which one you are going to use).
 * Run the main.py, this is the main file and has the main method which runs everything else.
+* You can read the results from this research in the next link [thesis](https://repositorio.uc.cl/bitstream/handle/11534/15705/664277.pdf?sequence=1)
